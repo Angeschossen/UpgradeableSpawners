@@ -1,1 +1,119 @@
 
+# General settings
+general:
+  # Language
+  # Pre translated:
+  # English: en-US
+  language: 'en-US'
+  # Worlds where players should be able to place upgradeable spawners.
+  worlds_list:
+    - 'world'
+
+
+# Database settings
+database:
+  # MySQL
+  mysql:
+    # Enable this to use MySQL instead of "file based"
+    # SQLite. For performance improvement it's recommended to
+    # use MySQL. If you don't have access to a MySQL server,
+    # just let this disabled (false).
+    enabled: false
+    ip-address: 'localhost'
+    port: '3306'
+    database: 'upgradeablehoppers'
+    table-prefix: 'uspawners'
+    user: 'minecraft'
+    password: 'password'
+
+
+command:
+  # Should players need to confirm their purchase at /Spawner get?
+  get-confirm: true
+  # Set aliases
+  # for /UpgradeableSpawners command
+  # NOTE: This settings
+  # requires /reload
+  aliases_list: []
+
+
+# Spawner Settings
+spawner:
+  # Allow only the owner
+  # of the hopper item
+  # to place it down.
+  only-owner: true
+  # Item settings /Hopper get
+  item:
+    # Cost of the item,
+    # if you're taking it from
+    # /Spawner get
+    cost: 1500.0
+
+  # Restrict normal spawners, which are no upgradeable spawners.
+  vanilla:
+    # Allow the crafting of normal spawners?
+    crafting: true
+    # Allow the placing of normal spawners?
+    placing: true
+
+
+protection:
+  # Protect spawners against explosives?
+  # If disabled, they will drop at a explosion.
+  anti-eplosive: true
+
+
+
+
+# Limit Upgradeable Spawners
+limit:
+  # Set the maximum amount of upgradeable spawners in one chunk.
+  # Disable: 0
+  max-per-chunk: 5
+  # Set area limits
+  area:
+    # Set the radius of chunks to be checked around the spawner.
+    # NOTE: This includes the origin chunk of the spawner. Two is the optional value.
+    chunk-radius: 2
+    # Set the max upgradeable spawners entity limit for the area.
+    # If this limit is reached, all upgradeable spawners in this area will be paused until
+    # there are less upgradebale spawner entities again.
+    # Disable: 0
+    max-entities: 200
+
+  # Set maximum amount of entities the spawner should be able to spawn in a specific period?
+  period:
+    # Set the time of the period.
+    # Example: Allow the spawner to spawn x entities every 1 hour.
+    # Timeunits: d, h, m, s
+    time: 1h
+    # Set max amount of entites for the period.
+    # The spawned amount will reset after the configured period.
+    # NOTE: This does not include killed entities
+    value: 200
+
+
+
+
+# Economy settings
+economy:
+  # Here you can choose which type
+  # of economy you want to use.
+  # Highest priority is at the top.
+  # If nothing could be enabled,
+  # the plugin, will use item based economy.
+  type:
+    # Enable vault economy?
+    vault: true
+    # Set the currency item for
+    # default item based economy.
+    default: 'DIAMOND'
+    # Use experience Levels as economy?
+    exp-levels: false
+
+# 3rd party plugin integrations
+integration:
+  lands:
+    # Should players be allowed to place hoppers only in claimed areas where they're trusted?
+    only-claimed: false
