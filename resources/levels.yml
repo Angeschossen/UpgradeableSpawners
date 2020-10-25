@@ -1,0 +1,96 @@
+# Here you can edit the farm levels.
+# You can add an infinitive amount of levels.
+# Please respect the given format. Otherwise, it might not work.
+# For any help join Discord: https://discord.gg/B4MAJVk
+
+
+# Spawn interval - Lower is better
+# This is the delay, in seconds, until the spawner will spawn its next mob.
+# TIMEUNIT: Seconds
+spawn_interval:
+  1:
+    value: 60
+    cost: 0
+  2:
+    value: 55
+    cost: 1000.0
+  3:
+    value: 50
+    cost: 2000.0
+  4:
+    value: 45
+    cost: 3000.0
+  5:
+    value: 40
+    cost: 4000.0
+  6:
+    value: 35
+    cost: 5000.0
+  7:
+    value: 30
+    cost: 6000.0
+  8:
+    value: 25
+    cost: 7500.0
+  9:
+    value: 20
+    cost: 12000.0
+  10:
+    value: 15
+    cost: 17500.0
+  11:
+    value: 10
+    cost: 20000.0
+
+
+# Spawn amount
+# Set how many mobs attempt to spawn in each period.
+# The period can be configured in the config file.
+period_amount:
+  1:
+    value: 2
+    cost: 0
+  2:
+    value: 4
+    cost: 5000.0
+  3:
+    value: 5
+    cost: 8000.0
+  4:
+    value: 7
+    cost: 1000.0
+
+
+# Required player range - Higher is better
+# The maximum distance (squared) a player can be in order for this spawner to be active.
+# Set the required player range for the spawner to spawn.
+player_range:
+  1:
+    value: 16
+    cost: 0
+  2:
+    value: 25
+    cost: 500.0
+  3:
+    value: 30
+    cost: 5000.0
+  4:
+    value: 35
+    cost: 2500.0
+
+
+# Max nearby entities
+# Set the maximum number of similar entities that are allowed to be within spawning range of this spawner.
+nearby_entities:
+  1:
+    value: 8
+    cost: 0
+  2:
+    value: 12
+    cost: 5000.0
+  3:
+    value: 15
+    cost: 7500.0
+  4:
+    value: 20
+    cost: 9000.0

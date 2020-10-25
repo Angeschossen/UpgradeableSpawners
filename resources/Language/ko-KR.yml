@@ -1,0 +1,62 @@
+general:
+  prefix: '&8[&e업그레이드 가능한 스포너&8] '
+  time:
+    seconds: 초
+    minutes: 분
+    hours: 시간
+message:
+  general:
+    no-permission: '&c당신은 권한을 가지고 있지 않습니다. &7당신은 {permission} 권한이 필요합니다.'
+  spawner:
+    created: '#t#&e&l스포너{newline}&7성공적으로 생성했습니다'
+    deleted: '#t#&e&l스포너{newline}&c성공적으로 제거했습니다'
+  no-access:
+    upgrade: '&c이 스포너를 업그레이드 할수 없습니다. &7그것은 &3{owner}&7에 속합니다.'
+    delete: '&c이 스포너를 삭제 할수 없습니다. &7그것은 &4{owner}&7에 속합니다.'
+    vanilla:
+      craft: '&c당신은 일반 스포너를 조합할수 없습니다. &7스포너를 구매할려면 &8/&3Spawners get&7를 사용하세요. &8우회
+        펄미션: uspawners.bypass.vanilla.craft'
+      place: '&c당신은 일반 스포너를 설치할수 없습니다. &7스포너를 구매할려면 &8/&3Spawners get&7를 사용하세요. &8우회
+        펄미션: uspawners.bypass.vanilla.place'
+      egg: '&c이 계란을 사용하여 엔티티 유형을 변경할 수 없습니다. &7당신은 스포너 메뉴에서 할수 있습니다.'
+  creation:
+    world: '&c이 월드에서 업그레이드 가능한 스폰너를 만들수 없습니다. &7관리자는 &3 {world}&7을(를) 월드 설정에 추가해야 합니다:
+      worlds_list'
+    owner: '&c당신은 이 스포너를 설치할수 없습니다. &7그것은 플레이어 &3{owner}&7에 속합니다. &8관리자는 구성에서
+      이것을 변경할 수 있습니다.'
+    max-per-chunk: '&c이 청크에 더 이상 스포너를 넣을 수 없습니다. &7이 서버는 한 청크에 최대 &3 {max}&7개의 스포너만
+      허용합니다. &8관리자는 구성에서 이것을 변경할 수 있습니다.'
+    max: '&c더 이상 업그레이드 가능한 스포너를 만들 수 없습니다. &7최대 &3 {max}&7개 까지 입니다. &8권한: uspawners.spawners.NUMBER'
+    only-claim: '&c당신은 여기에 스포너를 설치할 수 없습니다. &7당신은 그것들의 당신의 청구에 넣을 필요가 있습니다.'
+command:
+  general:
+    cant-afford: '&c당신은 여유가 없습니다. &7당신은 &c{cost}원&7을 더 지불해야 합니다.'
+    player-offline: '&c이 플레이어를 찾을 수 없습니다. &7플레이어&3 {player}&7이(는) 오프라인 입니다.'
+    invalid-number: '&e{argument}&c은(는) 인수에 유효하지 않는 숫자를 입력했습니다. &7유효한 번호를 입력하세요.'
+  get:
+    confirmation: '&c이 구매를 확인할려면 &8(&8/&3Spawners get &8[&3개수&8] &3confirm&8)&c를 입력하세요.
+      &7이 스포너를 구입할려면&c ${costs}&7이 필요합니다.'
+    dropped: '&7당신은 {cost}원에 {amount}개의 스포너를 받았습니다. &c인벤토리에 남은 공간이 없기 때문에 일부는 땅에 떨어졌습니다.'
+    success: '&7당신은 {cost}원에 {amount}개의 아이템을 받았습니다. &7그들은 지금 당신의 재고에 있습니다.'
+  give:
+    type: '&c서버 버전에 유효한 엔티티 유형이 아닙니다. &7유형&3 {type}&7을(를) 찾을수 없습니다. 엔티티 파일에 추가했는지 확인하세요. &7가능한 엔터티 유형 목록: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html'
+    dropped: '&7당신은&3 {amount} &7개의 스포너를 받았습니다. &c재고에 남은 공간이 없기 때문에 지상으로 떨어졌습니다.'
+    success:
+      sender: '&7당신은 성공적으로 &3{items} &3{player}&7에게 스포너를 주었습니다.'
+      target: '&7당신은&3 {amount}&7개의 스포너를 받았습니다. 당신의 인벤토리에 넣었습니다.'
+  help:
+    help: '&8/&3{cmd} help&7를 사용하세요.'
+    no-page: '&c페이지&e {page} &c이 존재하지 않습니다. &7오직?'
+    cmd-not-exist: '&c이 하위 명령이 존재하지 않습니다. &7명령어&3 {command}&7을(를) 찾을수 없습니다.'
+help:
+  general:
+    prefix: '&7사용법: '
+    header: '&7-------<- &e업그레이드 가능한 스포너 도움말 &7페이지&6 {page} &8/&e {pages} &7->-------&a'
+    page: '&7Use &8/&3Spawners help {next} &7다음 페이지. <> = 필요한 [] = 선택'
+    footer: '&7-------<- &e업그레이드 가능한 스포너 도움말 &7페이지&6 {page} &8/&e {pages} &7->-------&a'
+  command:
+    help: '&8/&3Spawners help &8[&a페이지&8] - &7도움말을 얻습니다'
+    get: '&8/&3Spawners get &8- &7스포너를 얻습니다'
+    give: '&8/&3Spawners give &8<&7플레이어&8> &8<&7엔티티&8> [&7개수&8] - &7스포너를 지급합니다'
+    admin:
+      reload: '&8/&3Spawners reload &8- &7구성을 리로드 합니다'

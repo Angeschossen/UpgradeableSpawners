@@ -1,0 +1,153 @@
+# General settings
+general:
+  # Language
+  # Pre translated:
+  # English: en-US
+  # German: de-DE - by Cryper96
+  # Korean: ko-KR - by eickmung
+  language: 'en-US'
+  # Worlds where players should be able to place upgradeable spawners.
+  worlds_list:
+    - 'world'
+
+
+# Database settings
+database:
+  # MySQL
+  mysql:
+    # Enable this to use MySQL instead of "file based"
+    # SQLite. For performance improvement it's recommended to
+    # use MySQL. If you don't have access to a MySQL server,
+    # just let this disabled (false).
+    enabled: false
+    ip-address: 'localhost'
+    port: '3306'
+    database: 'upgradeablespawners'
+    table-prefix: ''
+    user: 'minecraft'
+    password: 'password'
+
+
+command:
+  # Should players need to confirm their purchase at /Spawner get?
+  get-confirm: true
+  # Set aliases
+  # for /UpgradeableSpawners command
+  # NOTE: This settings
+  # requires /reload
+  alias:
+    upgradeablespawners_list:
+      - 'uspawners'
+      - 'uspawner'
+      - 'spawners'
+      - 'spawner'
+
+
+# Spawner Settings
+spawner:
+  # Allow only the owner
+  # of the spawner item
+  # to place it down.
+  only-owner: true
+  # Should all players be able to break spawners that aren't protected by any claiming plugin?
+  # The player who broke the spawners will be set as the new owner of the spawner item.
+  # NOTE: The owner of the spawner can always delete / break their spawners.
+  # NOTE: This setting requires server reload / restart.
+  visitor-break: false
+  # Allow changing the entity type of a upgradeable spawner?
+  # If you also want to disable eggs, make sure to disable the setting below (vanilla.egg).
+  # You can also disable specific items in the GUI menu by adding enabled: false to the item configuration in the GUI language file.
+  entity-change: true
+  # Should spawners only be able to be mineable with a silktouch pickaxe?
+  # NOTE: If enabled, players still need the uspawners.silktouch permission to mine the spawners. Players with the uspawners.bypass.delete permission can bypass this and mine it without any pickaxe.
+  # If disabled, players can delete and get the hopper by using shift plus left click.
+  silktouch: false
+  # Set the amount of mobs the spawner should attempt spawn per upgradeable interval.
+  # NOTE: The actual spawning is handled by the server. That means if there is not enough space around the spawner,
+  # it might spawn less to prevent issues.
+  mob-amount: 3
+
+  # Item settings /Spawner get
+  item:
+    # Cost of the item,
+    # if you're taking it from
+    # /Spawner get
+    cost: 1500.0
+
+  # Restrict normal spawners, which are no upgradeable spawners, or other stuff like using eggs on spawners.
+  vanilla:
+    # Allow the placing of normal spawners?
+    placing: true
+    # Allow changing the entity type of the spawner with a spawn egg?
+    egg: false
+    # Should vanilla spawners be converted into upgradeable spawners when a player interacts with them?
+    # NOTE: It is not possible to convert vanilla spawners without player interaction since the server does not
+    # provide a way to indentify the owner without interaction.
+    claim:
+      enabled_2: false
+      # Should the convert be allowed, even if the player reached his maximum amount of upgradeable spawners?
+      ignore-max: false
+
+
+protection:
+  # Protect spawners against explosives?
+  # If disabled, they will drop at a explosion.
+  anti-explosive: true
+  # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2
+  # Allow players, which are trusted in the region where the spawner is located in, to edit the spawner?
+  allow-region-members: true
+
+
+# Limit Upgradeable Spawners
+limit:
+  # Set the maximum amount of upgradeable spawners in one chunk.
+  # Disable: 0
+  max-per-chunk: 5
+  # Should spawned entities from a upgradeable spawner have a AI?
+  # If set to false, these entities will not move or do pathfinding.
+  # This helps to improve server performance.
+  entity-ai: true
+
+  # Set area limits
+  area:
+    # Set the radius of chunks to be checked around the spawner.
+    # NOTE: This includes the origin chunk of the spawner. Two is the optional value.
+    chunk-radius: 2
+    # Set the max upgradeable spawners entity limit for the area.
+    # If this limit is reached, all upgradeable spawners in this area will be paused until
+    # there are less upgradebale spawner entities again.
+    # Disable: 0
+    max-entities: 150
+
+  # Set maximum amount of entities the spawner should be able to spawn in a specific period?
+  period:
+    # Set the time of the period.
+    # Example: Allow the spawner to spawn x entities every 1 hour.
+    # The max amount of entities per period can be upgraded per spawner. Providing a useful upgrade and performance improvement at the same time.
+    # Timeunits: d, h, m, s
+    time: 1h
+
+
+
+
+# Economy settings
+economy:
+  # Here you can choose which type
+  # of economy you want to use.
+  # Highest priority is at the top.
+  # If nothing could be enabled,
+  # the plugin, will use item based economy.
+  type:
+    # Enable vault economy?
+    vault: true
+    # Set the currency item for
+    # default item based economy.
+    default: 'DIAMOND'
+    # Use experience Levels as economy?
+    exp-levels: false
+
+# 3rd party plugin integrations
+integration:
+  lands:
+    # Should players be allowed to place spawners only in claimed areas where they're trusted?
+    only-claimed: false

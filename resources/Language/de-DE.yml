@@ -1,0 +1,67 @@
+general:
+  prefix: '&8[&eUpgradeSpawners&8] '
+  time:
+    seconds: Sekunde(n)
+    minutes: Minute(n)
+    hours: Stunde(n)
+message:
+  general:
+    no-permission: '&cDu hast keine Berechtigung das zu tun. &7Du brauchst die Berechtigung:
+      {permission}.'
+  spawner:
+    created: '#t#&e&lSpawner{newline}&7Erfolgreich erstellt'
+    deleted: '#t#&e&lSpawner{newline}&cErfolgreich entfernt'
+  no-access:
+    upgrade: '&cDu darfst diesen Spawner nicht Upgraden. &7Er gehört dem Spieler&3
+      {owner}&7.'
+    delete: '&cDu darfst diesen Spawner nicht löschen. &7Er gehört dem Spieler&4 {owner}&7.'
+    vanilla:
+      craft: '&cDu darfst keine normalen Spawner bauen. &7Nutz bitte &8/&3Spawners
+        get &7um einen Spawner zu kaufen. &8Bypass permission: uspawners.bypass.vanilla.craft'
+      place: '&cDu darfst keine normalen Spawner platzieren. &7Nutz &8/&3Spawners
+        get &7um einen Spawner zu kaufen. &8Bypass permission: uspawners.bypass.vanilla.place'
+  creation:
+    world: '&cDu darfst keine Upgradbare Spawner in dieser Welt erstellen. &7Ein Administrator
+      muss die Welt&3 {world} &7in die Config eintragen: worlds_list'
+    owner: '&cDu kannst den Spawner nicht platzieren. &7Er gehört zu dem Spieler&3 {owner}&7. &8Ein Administrator
+    kann das in der Config ändern.'
+    max-per-chunk: '&cDu kannst nicht noch mehr Spawner in diesem Chunk platzieren. &7Der Server
+      erlaubt nur &3 {max} &7Spawner pro Chunk. &8Ein Administrator kann das in der Config ändern.'
+    max: '&cDu kannst nicht noch mehr Upgradbare Spawner erstellen. &7Dein Maximum ist&3 {max}&7.
+      &8Permission: uspawners.spawners.NUMBER'
+    only-claim: '&cDu kannst hier keine Spawner platzieren. &7Du musst sie in deinem besetzten Chunk platzieren.'
+command:
+  general:
+    cant-afford: '&cDu kannst die das nicht leisten. &7Du brauchst&c ${cost} &7 um es dir zu kaufen.'
+    player-offline: '&cSpieler konnte nicht gefunden werden. &7Spieler&3 {player} &7ist offline.'
+    invalid-number: '&cDu hast eine falsche Eingabe getätigt bei &e {argument} &c.
+      &7Bitte korrigier deine Eingabe.'
+  get:
+    confirmation: '&cBitte bestätige dein Einkauf &8(&8/&3Spawners get &8[&3Anzahl&8]
+      &3confirm&8)&c. &7Kaufen der Spawner wird dich&c ${costs}&7 kosten.'
+    dropped: '&7Du hast&3 {amount} &7Spawner für&c ${cost}&7 erhalten. &cEinige wurden auf den Boden
+      fallen gelassen weil dein Inventar voll ist.'
+    success: '&7Du hast&3 {amount} &7Spawner für&c ${cost}&7 erhalten. Sie befinden sich in deinem Inventar.'
+  give:
+    type: '&cDas ist keine gültige Entity für deise Server Version. &7Liste der möglichen Entity''s: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html'
+    dropped: '&7Du hast&3 {amount} &7Spawner erhalten. &cSie wurden auf den Boden fallen gelassen, weil
+      dein Inventar avoll ist.'
+    success:
+      sender: '&7Du hast erfolgreich&3 {items} &7Spawner dem Spieler&3 {player}&7 gegeben.'
+      target: '&7Du hast&3 {amount} &7Spawner erhalten. Sie befinden sich in deinem Inventar.'
+  help:
+    help: '&7Nutz &8/&3{cmd} help &7für Hilfe.'
+    no-page: '&cDie Seite&e {page} &cexistiert nicht. &7Tippfehler?'
+    cmd-not-exist: '&cDieser Befehl existiert nicht. &7Der Befehl&3 {command} &7wurde nicht gefunden.'
+help:
+  general:
+    prefix: '&7Nutzung: '
+    header: '&7-------<- &eUpgradeableSpawners Hife &7Seite&6 {page} &8/&e {pages} &7->-------&a'
+    page: '&7Nutz &8/&3Spawners help {next} &7für die nächste Seite. <> = benötigt [] = optional'
+    footer: '&7-------<- &eUpgradeableSpawners Help &7Seite&6 {page} &8/&e {pages} &7->-------&a'
+  command:
+    help: '&8/&3Spawners help &8[&apage&8] - &7bekomm Hilfe'
+    get: '&8/&3Spawners get &8- &7Spanwer kaufen'
+    give: '&8/&3Spawners give &8<&7player&8> &8<&7entity&8> [&7amount&8] - &7Spawner geben'
+    admin:
+      reload: '&8/&3Spawners reload &8- &7Configuration neu laden'

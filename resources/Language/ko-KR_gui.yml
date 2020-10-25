@@ -1,0 +1,275 @@
+general:
+  wYes: '&a예'
+  wNo: '&c아니요'
+  none: '&c없음'
+  now: '&a지금'
+  enabled: '&a활성화됨'
+  disabled: '&c비활성화됨'
+  others: '다른 사람들'
+  max: '&a최대 도달'
+  role:
+    owner: '&4주인'
+    visitor: '&7방문자'
+physical-Item:
+  spawner:
+    name: '&e스포너 아이템:&7 {entity}'
+    lore:
+      - '&7이 아이템으로 어딘가에'
+      - '&7설치하여 업그레이드 가능한'
+      - '&7스포너를 생성할수 있습니다.'
+      - ' '
+      - '&e정보'
+      - '  &7주인:&3 {owner}'
+      - '  &7엔티티:&3 {entity}'
+      - '  &7간격: {interval}'
+      - '  &7스폰량: {amount}'
+      - '  &7플레이어 범위: {range}'
+      - '  &7근처 최대: {nearby}'
+    material: SPAWNER
+skull:
+  pig: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
+  sheep: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19
+gui:
+  main:
+    title: '&8스포너 메뉴'
+    size: 36
+    s:
+      close:
+        name: '&c닫기'
+        lore:
+          - '&7메뉴를 닫습니다.'
+          - ' '
+          - '&8- &7스포너 블럭을 클릭하여'
+          - '  &7다시 열수 있습니다.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+      upgrades:
+        name: '&6업그레이드'
+        lore:
+          - '&7이 줄에서 당신의 스포너를'
+          - '&7업그레이드 할수 있습니다.'
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 11
+      configurations:
+        name: '&6구성'
+        lore:
+          - '&7이 줄에서 플레이어를 믿고'
+          - '&7스포너를 구성할수 있습니다.'
+        material: COMMAND_BLOCK
+        slot: 20
+    f:
+      upgrade_spawn_interval:
+        name: '&8> &6업그레이드 간격'
+        lore:
+          - '&7현재 설정:&3 {current}'
+          - ' '
+          - '&7다음 레벨:&a {next}'
+          - '&7가격:&c {cost}원'
+          - ' '
+          - '&7스폰 간격이 짧으면'
+          - '&7스폰이 더 자주 스폰됩니다.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3N2RhZmM4YzllYTA3OTk2MzMzODE3OTM4NjZkMTQ2YzlhMzlmYWQ0YzY2ODRlNzExN2Q5N2U5YjZjMyJ9fX0=
+        slot: 13
+      upgrade_spawn_amount:
+        name: '&8> &6스폰량 업그레이드'
+        lore:
+          - '&7현재 설정:&3 {current}'
+          - ' '
+          - '&7다음 레벨:&a {next}'
+          - '&7가격:&c {cost}원'
+          - ' '
+          - '&7스폰량이 많아지면 스폰너가'
+          - '&7한번에 더 많은 엔티티를'
+          - '&7스폰합니다.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVhMjI0ODA3NjkzOTc4ZWQ4MzQzNTVmOWU1MTQ1ZjljNTZlZjY4Y2Y2ZjJjOWUxNzM0YTQ2ZTI0NmFhZTEifX19
+        slot: 14
+      upgrade_nearby_entities:
+        name: '&8> &6주변 엔티티 업그레이드'
+        lore:
+          - '&7현재 설정:&3 {current}'
+          - ' '
+          - '&7다음 레벨:&a {next}'
+          - '&7가격:&c {cost}원'
+          - ' '
+          - '&7더 높은 최대 근처 엔티티 제한은'
+          - '&7당신의 스포너에서 한 곳에서 더 큰 그룹'
+          - '&7의 엔티티를 소환할수 있도록 합니다.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGViZTdlNTIxNTE2OWE2OTlhY2M2Y2VmYTdiNzNmZGIxMDhkYjg3YmI2ZGFlMjg0OWZiZTI0NzE0YjI3In19fQ==
+        slot: 15
+      upgrade_player_range:
+        name: '&8> &6플레이어 범위 업그레이드'
+        lore:
+          - '&7현재 설정:&3 {current}'
+          - ' '
+          - '&7다음 레벨:&a {next}'
+          - '&7가격:&c {cost}원'
+          - ' '
+          - '&7플레이어 범위 값이 높을수록'
+          - '&7멀리있는 동안에도 스포너가'
+          - '&7생물을 생성할수 있습니다.'
+        material: PLAYER_HEAD
+        slot: 16
+      entity-type:
+        name: '&8> &6엔티티 타입 설정'
+        lore:
+          - '&7스포너의 엔티티 유형 설정.'
+          - '&7현재:&3 {type}'
+        material: PLAYER_HEAD
+        slot: 22
+      paused_chunk:
+        name: '&c일시 중지됨'
+        lore:
+          - '&7이 스포너 영역에 엔티티가 너무 많기 때문에'
+          - '&7스포너가 일시 중지되었습니다.'
+          - ' '
+          - '&7최대 엔티티:&3 {max}'
+          - '&8구성은 콘피그에서 가능.'
+        material: ACACIA_SIGN
+        slot: 36
+      paused_period:
+        name: '&c일시 중지됨'
+        lore:
+          - '&7이 스포너는 마지막에 최대 엔티티 수'
+          - '&7를 스폰했기 때문에 일시 중지'
+          - '&7지되었습니다'
+          - '&7&n{period}&7.'
+          - ' '
+          - '&5{reset}&7 후에 다시 활성화 됩니다.'
+          - ' '
+          - '&7최대 엔티티:&3 {max}'
+          - '&8구성은 콘피그에서 가능.'
+        material: ACACIA_SIGN
+        slot: 36
+    a:
+      failure_max:
+        name: '&4최대 레벨 도달'
+        lore:
+          - '&7현재 설정:&3 {current}'
+          - ' '
+          - '&7이 스포너는 이미'
+          - '&7최대 레벨 업그레이드에'
+          - '&7도달했습니다.'
+          - ' '
+          - '&8- &7관리자에게 새로운 레벨'
+          - '  &7을 설정할수 있게 요청'
+          - '  &7할수 있습니다.'
+      failure_costs:
+        name: '&4당신은 이것을 구매할 여유가 없습니다'
+        lore:
+          - '&7당신은 비용을 지불할 돈이 충분'
+          - '&7하지 않습니다.'
+          - ' '
+          - '&7당신은 &c{cost}&7원이 필요합니다.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 36
+      placeholder_2:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 12
+        to: 12
+      placeholder_3:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 21
+        to: 21
+  entities:
+    title: '&8엔티티'
+    size: 36
+    l:
+      change:
+        name: '&e{entity}'
+        lore:
+          - '&7이 스포너의 엔티티 타입을'
+          - '&7변경할려면 여기를 클릭하세요.'
+          - ' '
+          - '&7가격:&c {cost}원'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+      buy:
+        name: '&e{entity}'
+        lore:
+          - '&7이 엔티티의 스포너를 구입하려면'
+          - '&7여기를 클릭하세요.'
+          - ' '
+          - '&7가격:&c {cost}원'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+    a:
+      failure_cost:
+        name: '&4실패: &c돈이 충분하지 않습니다'
+        lore:
+          - '&7당신은 이것을 지불할 돈을 충분히 가지고 있지 않습니다'
+          - '&7당신은&c {cost}&7원이 필요합니다.'
+    f:
+      back:
+        name: '&c돌아가기'
+        lore:
+          - '&7{back}으로 돌아갑니다.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9이전 페이지'
+        lore:
+          - '&7이전 페이지로 이동:&9 {previous}'
+          - ' '
+          - '&8- &7현재:&3 {current}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&a다음 페이지'
+        lore:
+          - '&7다음 페이지로 이동:&9 {next}'
+          - ' '
+          - '&8- &7현재:&3 {current}'
+        material: ARROW
+        slot: 35
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
+  action-confirm:
+    title: '&8이 동작을 확인하세요'
+    size: 27
+    s:
+      info:
+        name: '&8> &6이 동작 확인'
+        lore:
+          - '&a예&7를 클릭하면 동의 또는'
+          - '&c아니요&7를 클릭하면 이 작업을 중단합니다.'
+        material: OAK_SIGN
+        slot: 14
+    l:
+      yes_spawner-delete:
+        name: '&a예'
+        lore:
+          - '&7스포너를 삭제할려면 여기를'
+          - '&7클릭하세요.'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_spawner-delete:
+        name: '&c아니요'
+        lore:
+          - '&7이 작업을 중단할려면 여기를'
+          - '&7클릭하세요.'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27

@@ -1,0 +1,357 @@
+# Resource page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# If you encounter any issues, please report them
+# to discord support server or via pm.
+# Bugs or issues are mostly fixed within hours.
+# 
+# 
+# Here you can edit the whole GUI.
+# You can set GUI titles, the size and
+# item names, lores, materials and slots.
+# Don't remove any values or keys.
+# 
+# You also can add new items to your GUI.
+# This can be done under gui.<GUI>.s.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+# 
+# gui:
+#   lands:
+#     title: '&8Your Lands'
+#     size: 27
+#     s:
+#       close:
+#         name: '&cClose'
+#         lore:
+#         - '&7Close this menu.'
+#         - ' '
+#         - '&8- &7You can open it again'
+#         - '  &7with &8/&3Lands menu&7.'
+#         material: 'RED_STAINED_GLASS_PANE'
+#         slot: 9
+# 
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# 
+# 
+# You also can apply new placeholders.
+# This can be done under gui.<GUI>.p.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+# 
+# gui:
+#   lands:
+#     p:
+#       placeholder_1:
+#       material: 'GRAY_STAINED_GLASS_PANE'
+#       from: 1
+#       to: 9
+# 
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# Added enabled: false to a item to disable it.
+# You can set every item as a custom head:
+# Visit /https://minecraft-heads.com/custom-heads
+# Then copy the 'value:' and paste it at 'material:'
+# 
+# 
+# If you encounter any issues or you simply have
+# some questions, contact me via PM or Discord.
+# Discord: https://discord.gg/B4MAJVk
+
+
+general:
+  wYes: '&aJa'
+  wNo: '&cNein'
+  none: '&cNichts'
+  now: '&aJetzt'
+  enabled: '&aAktivieren'
+  disabled: '&cDeaktivieren'
+  others: Andere
+  max: '&aMaximum erreicht'
+  role:
+    owner: '&4Besitzer'
+    visitor: '&7Besucher'
+physical-Item:
+  spawner:
+    name: '&eSpawner Item:&7 {entity}'
+    lore:
+    - '&7Mit diesem Item kannst du'
+    - '&7ein Upgradbaren Spawner'
+    - '&7erstellen, du kannst ihn'
+    - '&7einfach platzieren.'
+    - ' '
+    - '&eInformation'
+    - '  &7Besitzer:&3 {owner}'
+    - '  &7Mob:&3 {entity}'
+    - '  &7Interval: {interval}'
+    - '  &7Spawn-Anzahl: {amount}'
+    - '  &7Spieler Radius: {range}'
+    - '  &7Maximum in der nähe: {nearby}'
+    material: SPAWNER
+skull:
+  pig: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
+gui:
+  main:
+    title: '&8Spawner Menu'
+    size: 36
+    s:
+      close:
+        name: '&cSchließen'
+        lore:
+        - '&7Schließt das Menü.'
+        - ' '
+        - '&8- &7Du kannst das Menü'
+        - '  &7wieder öffnen, indem du'
+        - '  &7wieder auf den Spawner'
+        - '  &7drückst.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+      upgrades:
+        name: '&6Erweiterungen'
+        lore:
+        - '&7In dieser Reihe kannst'
+        - '&7du die Erweiterungen des'
+        - '&7Spawners sehen.'
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 11
+      configurations:
+        name: '&6Einstellungen'
+        lore:
+        - '&7In dieser Reihe kannst'
+        - '&7Spieler vertrauen und'
+        - '&7den Spawner einstellen.'
+        material: COMMAND_BLOCK
+        slot: 20
+    f:
+      upgrade_spawn_interval:
+        name: '&8> &6Upgrade Interval'
+        lore:
+        - '&7Aktuelle Anzahl:&3 {current}'
+        - ' '
+        - '&7Nächstes Level:&a {next}'
+        - '&7Kosten:&c {cost}'
+        - ' '
+        - '&7Eine kleiner Spawn Intervall'
+        - '&7stellt sicher das der Spawner'
+        - '&7schneller spawnt.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3N2RhZmM4YzllYTA3OTk2MzMzODE3OTM4NjZkMTQ2YzlhMzlmYWQ0YzY2ODRlNzExN2Q5N2U5YjZjMyJ9fX0=
+        slot: 13
+      upgrade_spawn_amount:
+        name: '&8> &6Upgrade Spawn Anzahl'
+        lore:
+        - '&7Aktuelle Anzahl:&3 {current}'
+        - ' '
+        - '&7Nächstes Level:&a {next}'
+        - '&7Kosten:&c {cost}'
+        - ' '
+        - '&7Eine höhere Anzahl lässt'
+        - '&7den Spawner mehr Mobs'
+        - '&7auf einmal Spawnen.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVhMjI0ODA3NjkzOTc4ZWQ4MzQzNTVmOWU1MTQ1ZjljNTZlZjY4Y2Y2ZjJjOWUxNzM0YTQ2ZTI0NmFhZTEifX19
+        slot: 14
+      upgrade_nearby_entities:
+        name: '&8> &6Upgrade näherer Entities'
+        lore:
+        - '&7Aktuelle Anzahl:&3 {current}'
+        - ' '
+        - '&7Nächstes Level:&a {next}'
+        - '&7Kosten:&c {cost}'
+        - ' '
+        - '&7Eine höhere Zahl lässt die'
+        - '&7verändert die Größe der '
+        - '&7Gruppe die aufeinmal spawnt.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGViZTdlNTIxNTE2OWE2OTlhY2M2Y2VmYTdiNzNmZGIxMDhkYjg3YmI2ZGFlMjg0OWZiZTI0NzE0YjI3In19fQ==
+        slot: 15
+      upgrade_player_range:
+        name: '&8> &6Upgrade Spieler Radius'
+        lore:
+        - '&7Aktuelle Anzahl:&3 {current}'
+        - ' '
+        - '&7Nächstes Level:&a {next}'
+        - '&7Kosten:&c {cost}'
+        - ' '
+        - '&7Eine höhere Reichweite'
+        - '&7ermöglicht es das Spawnen'
+        - '&7von Gegner je weiter'
+        - '&7weg du bist.'
+        material: PLAYER_HEAD
+        slot: 16
+      entity-type:
+        name: '&8> &6Mob Typ setzen'
+        lore:
+        - '&7Setzt den Mob Typ des Spawners.'
+        - '&7Zurzeit:&3 {type}'
+        material: PLAYER_HEAD
+        slot: 22
+      paused_chunk:
+        name: '&cPausiert'
+        lore:
+        - '&7Der Spanwer wurde pasuiert'
+        - '&7weil es zuviele Mobs im Radius'
+        - '&7des Spawners sind.'
+        - ' '
+        - '&7Max. Mobs:&3 {max}'
+        - '&8In der Config einstellbar.'
+        material: ACACIA_SIGN
+        slot: 36
+      paused_period:
+        name: '&cPausiert'
+        lore:
+        - '&7Der Spawner ist pausiert'
+        - '&7weil zuviele Mobs im Intervall'
+        - '&7von &n{period}&7 gespawnt wurden.'
+        - ' '
+        - '&7Er wird wieder Aktiv in:'
+        - '&5{reset}&7.'
+        - ' '
+        - '&7Max. Mobs:&3 {max}'
+        - '&8In der Config einstellbar.'
+        material: ACACIA_SIGN
+        slot: 36
+    a:
+      failure_max:
+        name: '&4Max Level erreicht'
+        lore:
+        - '&7Aktuelle Anzahl:&3 {current}'
+        - ' '
+        - '&7Der Spawner hat das'
+        - '&7maximum für die Erweiterung'
+        - '&7erreicht.'
+        - ' '
+        - '&8- &7Du kannst ein'
+        - '  &7Administrator fragen'
+        - '  &7dies zu erhöhen.'
+      failure_costs:
+        name: '&4Nicht genug Geld'
+        lore:
+        - '&7Du hast nicht genug Geld'
+        - '&7um dies dir zu kaufen.'
+        - ' '
+        - '&7Du brauchst&c ${cost}&7.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 36
+      placeholder_2:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 12
+        to: 12
+      placeholder_3:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 21
+        to: 21
+  entities:
+    title: '&8Entities'
+    size: 36
+    l:
+      change:
+        name: '&e{entity}'
+        lore:
+        - '&7Drück hier um den'
+        - '&7Typ zu ändern.'
+        - ' '
+        - '&7Cost:&c ${cost}'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+      buy:
+        name: '&e{entity}'
+        lore:
+        - '&7Drück hier um den'
+        - '&7Mob für den Spawner'
+        - '&7zu kaufen. '
+        - ' '
+        - '&7Kostet:&c ${cost}'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+    a:
+      failure_cost:
+        name: '&4Fehlgeschlagen: &cNicht genug Geld'
+        lore:
+        - '&7Du hast nicht genug Geld um dies'
+        - '&7zu bezahlen. Du brauchst&c ${cost}&7.'
+    f:
+      back:
+        name: '&cZurück'
+        lore:
+        - '&7Zurück zu'
+        - '{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9Nächste Seite'
+        lore:
+        - '&7Zur vorherigen Seite:&9 {previous}'
+        - ' '
+        - '&8- &7Aktuelle Seite:&3 {current}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&aNächste Seite'
+        lore:
+        - '&7Zur nächsten Seite:&9 {next}'
+        - ' '
+        - '&8- &7Aktuelle Seite:&3 {current}'
+        material: ARROW
+        slot: 35
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
+  action-confirm:
+    title: '&8Bitte bestätigen'
+    size: 27
+    s:
+      info:
+        name: '&8> &6Aktion bestätigen'
+        lore:
+        - '&7Drück auf &aJa &7um zu bestätigen'
+        - '&7oder &cNein &7zum Abbrechen.'
+        material: OAK_SIGN
+        slot: 14
+    l:
+      yes_spawner-delete:
+        name: '&aJa'
+        lore:
+        - '&7Drück hier um den Spawner'
+        - '&7zu löschen.'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_spawner-delete:
+        name: '&cNein'
+        lore:
+        - '&7Drück hier um die'
+        - '&7Aktion abzubrechen.'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
