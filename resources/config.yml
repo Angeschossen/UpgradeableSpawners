@@ -10,6 +10,10 @@ general:
   worlds_list:
     - 'world'
 
+  # Set the format of all economy related displays.
+  # NOTE: This setting requires server reload / restart.
+  eco-format: '#,###.00'
+
 
 # Database settings
 database:
@@ -54,18 +58,27 @@ spawner:
   # NOTE: The owner of the spawner can always delete / break their spawners.
   # NOTE: This setting requires server reload / restart.
   visitor-break: false
-  # Allow changing the entity type of a upgradeable spawner?
+  # Allow changing the entity type of upgradeable spawner?
   # If you also want to disable eggs, make sure to disable the setting below (vanilla.egg).
   # You can also disable specific items in the GUI menu by adding enabled: false to the item configuration in the GUI language file.
   entity-change: true
   # Should spawners only be able to be mineable with a silktouch pickaxe?
   # NOTE: If enabled, players still need the uspawners.silktouch permission to mine the spawners. Players with the uspawners.bypass.delete permission can bypass this and mine it without any pickaxe.
-  # If disabled, players can delete and get the hopper by using shift plus left click.
-  silktouch: false
+  # If disabled, players can delete and get the spawner by using shift plus left click.
+  silktouch:
+    enabled_5: false
+    # Set the required minimum silktouch level.
+    min-level: 1
+    # Also allow the mining of vanilla spawners?
+    # NOTE: If the vanilla spawner convert option is enabled, then this setting won't have any influence as
+    # vanilla spawners will be converted into uspawners upon interaction.
+    vanilla_2: false
   # Set the amount of mobs the spawner should attempt spawn per upgradeable interval.
   # NOTE: The actual spawning is handled by the server. That means if there is not enough space around the spawner,
   # it might spawn less to prevent issues.
   mob-amount: 3
+  # Should only players with the uspawners.upgrade permission be able to upgrade any spawner?
+  upgrade-perm: false
 
   # Item settings /Spawner get
   item:
@@ -88,14 +101,32 @@ spawner:
       # Should the convert be allowed, even if the player reached his maximum amount of upgradeable spawners?
       ignore-max: false
 
+  # Teleportation settings (/Spawners list)
+  # Permission: uspawners.teleport
+  teleportation:
+    # Wait x seconds before starting teleportation.
+    wait: 3
+    # Set teleportation cost.
+    cost_2: 200
+
+  # Default settings. These only apply to new spawner creations.
+  # Available: BUTCHER
+  default-settings_list: []
+
+# Hologram above the spawner to show stats about the levels and entity type.
+hologram:
+  # This setting requires server reload / restart.
+  enabled_3: true
+  # Only show the hologram, if the spawner is paused?
+  only-paused: true
+  # Y offset - adjust the height
+  offset: 0
+
 
 protection:
   # Protect spawners against explosives?
   # If disabled, they will drop at a explosion.
   anti-explosive: true
-  # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2
-  # Allow players, which are trusted in the region where the spawner is located in, to edit the spawner?
-  allow-region-members: true
 
 
 # Limit Upgradeable Spawners
@@ -103,10 +134,14 @@ limit:
   # Set the maximum amount of upgradeable spawners in one chunk.
   # Disable: 0
   max-per-chunk: 5
-  # Should spawned entities from a upgradeable spawner have a AI?
+  # Should spawned entities from a upgradeable spawner have AI?
   # If set to false, these entities will not move or do pathfinding.
   # This helps to improve server performance.
-  entity-ai: true
+  # NOTE: This setting requires server reload / restart.
+  no-ai:
+    enabled_4: false
+    # Should entities still be able to get pushed around by water or other entities?
+    water-pushing: true
 
   # Set area limits
   area:
@@ -116,6 +151,7 @@ limit:
     # Set the max upgradeable spawners entity limit for the area.
     # If this limit is reached, all upgradeable spawners in this area will be paused until
     # there are less upgradebale spawner entities again.
+    # This does only take entities into account that were spawned by a upgradeable spawner.
     # Disable: 0
     max-entities: 150
 
@@ -151,3 +187,8 @@ integration:
   lands:
     # Should players be allowed to place spawners only in claimed areas where they're trusted?
     only-claimed: false
+    # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox
+    # Allow players, which are trusted in the region where the
+    # farm is located in, to break blocks, place blocks and
+    # interact, if they're allowed to do so in the region?
+    allow-region-members: true
