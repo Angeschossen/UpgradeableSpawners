@@ -35,123 +35,165 @@ general:
     minutes: minute(s)
     hours: heure(s)
   teleportation:
-    bossbar: '&7Patienter &5{time} &7Seconde(s) anvant la téléportation.'
+    bossbar: '&7Patienter &5{time} &7Seconde(s) avant la téléportation.'
 message:
   general:
-    no-permission: '&cVous n''avez pas la permission de faire cela. &7Vous avez besoin de la permission : {permission}.'
+    no-permission: '&cVous n''avez pas la permission de faire cela. &7Vous avez besoin
+      de la permission : {permission}.'
   spawner:
     created: '#t#&e&lSpawner{newline}&7Créé avec succès'
     deleted: '#t#&e&lSpawner{newline}&cSupprimer avec succès'
     convert:
-      untrusted: '&cYou can''t claim this vanilla spawner, because you''re not trusted in this area.'
-      success: '&7You successfully claimed this vanilla spawner and converted it into a upgradeable spawner.'
-    egg: '#t#&e&lEntity-Type{newline}&7Successfully changed.'
+      untrusted: '&cVous ne pouvez pas revendiquer ce spawner vanilla, car on ne vous
+        fait pas confiance dans ce domaine.'
+      success: '&7Vous avez réussi à réclamer ce spawner vanilla et à le convertir
+        en un spawner améliorable.'
+    egg: '#t#&e&lType d''entité{newline}&7Changé avec succès.'
   no-access:
-    upgrade: '&cYou''re not allowed to upgrade this spawner. &7It belongs to&3 {owner}&7.'
-    delete: '&cYou''re not allowed to delete this spawner. &7It belongs to&3 {owner}&7.'
+    upgrade: '&cVous n''êtes pas autorisé à mettre à niveau ce spawner. &7Il appartient
+      à &3{owner}&7.'
+    delete: '&cVous n''êtes pas autorisé à supprimer ce spawner. &7Il appartient à
+      &3{owner}&7.'
     vanilla:
-      craft: '&cYou''re not allowed to craft normal spawners. &7Use &8/&espawners get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.craft'
-      place: '&cYou''re not allowed to place normal spawners. &7Use &8/&espawners get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.place'
-      egg: '&cYou''re not allowed to use this egg to change the spawners entity type. &7You can do that in the spawner menu.'
+      craft: '&cVous n''êtes pas autorisé à fabriquer des spawners normaux. &7Utilisez
+        &8/&espawners get &7pour acheter un  spawner. &8Permission de bypass : uspawners.bypass.vanilla.craft'
+      place: '&cVous n''êtes pas autorisé à placer des spawners normaux. &7Utilisez
+        &8/&espawners get &7pour acheter un  spawner. &8Permission de bypass : uspawners.bypass.vanilla.place'
+      egg: '&cVous n''êtes pas autorisé à utiliser cet oeuf pour modifier le type
+        d''entité des spawners. &7Vous pouvez le faire dans le menu spawner.'
   creation:
-    world: '&cYou''re not allowed to create upgradeable spawners in this world. &7An administrator needs to add world&3 {world} &7to config: worlds_list'
-    owner: '&cYou can''t place this spawner. &7It belongs to player&3 {owner}&7. &8An administrator can change that in config.'
-    max-per-chunk: '&cYou can''t place any more spawners in this chunk. &7The server only allows a maximum of&3 {max} &7spawners in one chunk. &8An administrator can change this in config.'
-    max: '&cYou can''t create any more upgradeable spawners. &7Your maximum is&3 {max}&7. &8Permission: uspawners.spawners.NUMBER'
-    only-claim: '&cYou can''t place any spawners here. &7You need to place them in your claims.'
+    world: '&cVous n''êtes pas autorisé à créer des spawners évolutifs dans ce monde.
+      &7Un administrateur doit ajouter le  monde &3{world} &7dans la configuration
+      : worlds_list'
+    owner: '&cVous ne pouvez pas placer ce spawner. &7&7Il appartient au joueur &3{owner}&7.
+      &8Un administrateur peut modifier cela dans la configuration.'
+    max-per-chunk: '&cVous ne pouvez plus placer de spawners dans ce chunk. &7Le serveur
+      n''autorise qu''un maximum de &3{max} &7spawners par chunk. &8Un administrateur
+      peut modifier cela dans la configuration.'
+    max: '&cVous ne pouvez plus créer de spawners évolutifs. &7Votre maximum est &3{max}&7.
+      &8Permission : uspawners.spawners.NUMBER'
+    only-claim: '&cVous ne pouvez pas placer de spawners ici. &7Vous devez les placer
+      dans vos claims.'
   silk:
-    enchantment: '&cWarning : You need a silktouch (level {level}) enchantement to mine this spawner. &7You won''t receive this spawner.'
-    permission: '&cWarning : You''re not allowed to mine this spawner with silktouch. &7You won''t receive this spawner. &8Permission: uspawners.silktouch'
+    enchantment: '&cAvertissement : Vous avez besoin d''un enchantement silktouch
+      (level {level}) pour miner ce spawner. &7Vous ne recevrez pas ce spawner.'
+    permission: '&cAvertissement : Vous n’êtes pas autorisé à miner ce spawner avec
+      silktouch. &7Vous ne recevrez pas ce spawner. &8Permission : uspawners.silktouch'
   teleportation:
-    already: '&cYou can''t start a second teleportation. There''s already a teleportation in progress. &7Please wait until it''s done.'
-    started: '&7Teleportation process started. Teleporting in&5 {sec} &7seconds. Please don''t move.'
-    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while you''re waiting&5 {sec} &7seconds for teleportation.'
-    chunk: '#t#&9&lTeleported[newline]&7X: {x} Z: {z} Cost:&c ${cost}'
-    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check your other plugins. &7This is not a UpgradeableSpawners issue.'
+    already: '&cVous ne pouvez pas démarrer une deuxième téléportation. Il y a déjà
+      une téléportation en cours. &7Veuillez attendre que ce soit fait.'
+    started: '&7Le processus de téléportation a commencé. Téléportation en &5{sec}
+      &7secondes. S''il vous plaît, ne bougez pas.'
+    cancelled: '&cVotre téléportation a été annulée. &7S''il vous plaît ne bougez
+      pas pendant que vous attendez &5{sec} &7secondes pour la téléportation.'
+    chunk: '#t#&9&lTéléporté[newline]&7X : {x} Z : {z} Cost : &c{cost} $'
+    plugin: '&cLa téléportation a été annulée par un plugin tier. &7Veuillez vérifier
+      vos autres plugins. &7Ce n''est pas un problème d''UpgradeableSpawners.'
     unsafe: |
-      &cTeleportation has been cancelled, because the destination is not safe.
+      &cLa téléportation a été annulée, car la destination n'est pas sécurisée.
 
-       [T]&7Teleport anyways: &8[CLICK][H]&7Warning: The teleportation destination is not safe and might be dangerous for you.[/H][C]{cmd}[/C][/T]
-    corrected: '&7The original teleport destination was unsafe. &7Your final destination has been corrected to a safe location.'
+       [T]&7Se téléporter quand même : &8[CLICK][H]&7Avertissement : La destination de téléportation n''est pas sûre et peut être dangereuse pour vous.[/H][C]{cmd}[/C][/T]
+    corrected: '&7La destination de téléportation d''origine n’était pas sûre. &7Votre
+      destination finale a été corrigée dans un endroit sûr.'
 command:
   general:
-    cant-afford: '&cYou can''t afford this. &7You need&c ${cost} &7money to do this.'
-    player-offline: '&cCouldn''t find this player. &7Player&3 {player} &7is offline.'
-    invalid-number: '&cYou entered an invalid number at the&e {argument} &cargument &7Please insert a valid number there.'
-    player-not-exist: '&cThere''s no player with the name&4 {player}&c. &7Typo?'
+    cant-afford: '&cVous ne pouvez pas vous le permettre. &7Vous avez besoin de &c{cost}
+      $ &7 pour le faire.'
+    player-offline: '&cImpossible de trouver ce joueur. &7Le joueur &3{player} &7est
+      hors ligne.'
+    invalid-number: '&cVous avez entré un numéro non valide dans l''argument &e{argument}
+      &7Veuillez y insérer un nombre valide.'
+    player-not-exist: '&cIl n''y a pas de joueur avec le nom &4{player}&c. &7Typo?'
   get:
     confirmation: |
-      &cPlease confirm this purchase. &7Buying these spawner(s) will cost you&c ${costs}&7.
+      &cVeuillez confirmer cet achat. &7L''achat de ces spawner vous coûtera &c{coûts} $&7.
 
-      [T]&7Confirm: &8[&7CLICK&8][H]&7Click here to confirm this purchase.[/H][C]upgradeablespawners get {amount} confirm[/C][/T]
-    dropped: '&7You received&3 {amount} &7spawner(s) for&c ${cost}&7. &cSome dropped on the ground, because there was no space left in your inventory.'
-    success: '&7You received&3 {amount} &7spawner(s) item for&c ${cost}&7. They''re now in your inventory.'
+      [T]&7Confirmer : &8[&7CLICK&8][H]&7Cliquez ici pour confirmer cet achat.[/H][C]upgradeablespawners get {amount} confirm[/C][/T]
+    dropped: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{cost} $&7. &cCertain
+      sont tombées sur le sol, car il n''y avait plus de place dans votre inventaire.'
+    success: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{cost} $&7. Ils sont
+      maintenant dans votre inventaire.'
   list:
-    retrieving: '&7Retrieving placed spawners coordinates of player {player}...'
+    retrieving: '&7Récupération des coordonnées des spawners placés du joueur {player}...'
   give:
-    type: '&cThis is not a valid entity type for your server version. &7Type&3 {type} &7not found. Make sure you added it to entities.yml. &7List of possible entity types : https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html'
-    dropped: '&7You received&3 {amount} &7spawner(s). &cThey dropped on the ground, because there was no space left in your inventory.'
+    type: '&cIl ne s''agit pas d’un type d''entité valide pour votre version de serveur.
+      &7Type &3{type} &7introuvable. Assurez-vous de l''avoir ajouté à entities.yml.
+      &7Liste des types d''entités possibles : https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html'
+    dropped: '&7Vous avez reçu &3{amount} &7spawner(s). &cIls sont tombés sur le sol,
+      car il n''y avait plus de place dans votre inventaire.'
     success:
-      sender: '&7You successfully gave&3 {amount} &7spawners(s) to player&3 {player}&7.'
-      target: '&7You received&3 {amount} &7spawners(s). They were put in your inventory.'
+      sender: '&7Vous avez donné &3{amount} &7spawner(s) au joueur &3{player} &7avec
+        succès.'
+      target: '&7Vous avez reçu &3{amount} &7spawner(s). Ils ont été mis dans votre
+        inventaire.'
   help:
-    header: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages} &7->---------'
-    footer: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages} &7->---------'
-    help: '&7Use &8/&3{cmd} help &7for help.'
-    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command &3{command} &7wasn''t found.'
+    header: '[NoPrefix]&7---------<- &9Aide d''UpgradeSpawners &7Page &3{page} &8/
+      &3{pages} &7->---------'
+    footer: '[NoPrefix]&7---------<- &9Aide ''UpgradeSpawners &7Page &3{page} &8/
+      &3{pages} &7->---------'
+    help: '&7Utiliser &8/&3{cmd} help &7pour afficher l''aide.'
+    cmd-not-exist: '&cCette sous-commande n''existe pas. &7la Commande &3{command}
+      &7n''a pas été trouvé.'
 help:
   command:
-    help: '[T]&e/spawners help &8[&epage&8] - &7Get help[H]&7Click to copy.[/H][SC]upgradeablespawners help[/SC][/T]'
-    get: '[T]&e/spawners get &8- &7Get spawner[H]&7Click to copy.[/H][SC]upgradeablespawners get[/SC][/T]'
-    list: '[T]&e/spawners list &8[&eplayer&8]- &7View spawners[H]&7Click to copy.[/H][SC]upgradeablespawners list[/SC][/T]'
-    give: '[T]&e/spawners give &8<&eplayer&8> &8<&eentity&8> [&eamount&8] [&elevels...&8] - &7Give spawner(s)[H]&7Click to copy.[/H][SC]upgradeablespawners give[/SC][/T]'
+    help: '[T]&e/spawners help &8[&epage&8] - &7Afficher l''aide[H]&7Cliquer pour
+      copier.[/H][SC]upgradeablespawners help[/SC][/T]'
+    get: '[T]&e/spawners get &8- &7Obtenir un spawner[H]&7Cliquer pour copier.[/H][SC]upgradeablespawners
+      get[/SC][/T]'
+    list: '[T]&e/spawners list &8[&eplayer&8]- &7Voir la liste des spawners du joueur[H]&7Cliquer
+      pour copier.[/H][SC]upgradeablespawners list[/SC][/T]'
+    give: '[T]&e/spawners give &8<&eplayer&8> &8<&eentity&8> [&eamount&8] [&elevels...&8]
+      - &7Donner un spawner(s) au joueur[H]&7Cliquer pour copier.[/H][SC]upgradeablespawners
+      give[/SC][/T]'
     admin:
-      admin: '[T]&e/spawners admin &8- &7Admin commands[H]&7Click to copy.[/H][SC]upgradeablespawners admin[/SC][/T]'
-      reload: '[T]&e/spawners reload &8- &7Reload configurations[H]&7Click to copy.[/H][SC]upgradeablespawners reload[/SC][/T]'
+      admin: '[T]&e/spawners admin &8- &7Commandes Admin[H]&7Cliquer pour copier.[/H][SC]upgradeablespawners
+        admin[/SC][/T]'
+      reload: '[T]&e/spawners reload &8- &7Recharger la configurations[H]&7Cliquer
+        pour copier.[/H][SC]upgradeablespawners reload[/SC][/T]'
       paused_chunk:
-        name: '&cPaused'
+        name: '&cPause'
         lore:
-        - '&7This spawner is paused, because'
-        - '&7there are too many entities in'
-        - '&7the area of this spawner.'
+        - '&7Ce spawner est mis en pause, car'
+        - '&7il y a trop d''entités dans'
+        - '&7la zone de ce spawner.'
         - ''
-        - '&7Max. entities : &3{max}'
-        - '&8Configureable in config.'
+        - '&7Max. entitiés : &3{max}'
+        - '&8Configurable dans la config.'
         material: ACACIA_SIGN
         slot: 36
       paused_period:
-        name: '&cPaused: Period'
+        name: '&cPause : Periode'
         lore:
-        - '&7This spawner is paused, because'
-        - '&7it spawned it''s maximum amount'
-        - '&7of &3{max} &7entities in the current period.'
+        - '&7Ce spawner est mis en pause, car'
+        - '&7il a spawné sa quantité maximale'
+        - '&7des &3{max} &7entités  de la période en cours.'
         - ''
-        - '&7It will be active again in :'
+        - '&7Il sera à nouveau actif dans :'
         - '&5~{reset}&7.'
         - ''
-        - '&7You can upgrade the period'
-        - '&7spawn amount above.'
+        - '&7Vous pouvez mettre à niveau la période'
+        - '&7de spawn ci-dessus.'
         material: ACACIA_SIGN
         slot: 36
 list:
   normal:
   - '&e{entity} Spawner'
   - 'Intervale : {interval}'
-  - 'Spawns per period : {period}'
-  - 'Nearby entities : {nearby}'
-  - 'Player distance : {distance}'
+  - 'Spawns par periode : {period}'
+  - 'Entités à proximité : {nearby}'
+  - 'Distance du joueur : {distance}'
   paused:
     chunk:
-    - '&cSpawner paused :'
-    - Too many entities in the
-    - area of this spawner.
+    - '&cSpawner en pause :'
+    - Trop d'entités dans la
+    - zone de ce spawner.
     - ''
-    - 'Max. spawned entities : {max}'
+    - 'Max. entités spawnées : {max}'
     period:
-    - '&cSpawner paused :'
-    - Spawned maximum amount of {max} entities
-    - in the current period of {period}.
+    - '&cSpawner en pause :'
+    - Quantité maximale d'entités spawnées {max}
+    - dans la période actuelle de {period}.
     - ''
-    - 'It will be active again in : ~{reset}'
-    - You can upgrade the period
-    - spawn amount in the menu.
+    - 'Il sera à nouveau actif dans : ~{reset}'
+    - Vous pouvez augmenter la periode
+    - de spawn dans le menu.
