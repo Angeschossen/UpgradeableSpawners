@@ -86,7 +86,7 @@ message:
       &7secondes. S''il vous plaît, ne bougez pas.'
     cancelled: '&cVotre téléportation a été annulée. &7S''il vous plaît ne bougez
       pas pendant que vous attendez &5{sec} &7secondes pour la téléportation.'
-    chunk: '#t#&9&lTéléporté[newline]&7X : {x} Z : {z} Cost : &c{cost} $'
+    chunk: '#t#&9&lTéléporté[newline]&7X : {x} Z : {z} Cost : &c{costs} $'
     plugin: '&cLa téléportation a été annulée par un plugin tier. &7Veuillez vérifier
       vos autres plugins. &7Ce n''est pas un problème d''UpgradeableSpawners.'
     unsafe: |
@@ -97,7 +97,7 @@ message:
       destination finale a été corrigée dans un endroit sûr.'
 command:
   general:
-    cant-afford: '&cVous ne pouvez pas vous le permettre. &7Vous avez besoin de &c{cost}
+    cant-afford: '&cVous ne pouvez pas vous le permettre. &7Vous avez besoin de &c{costs}
       $ &7 pour le faire.'
     player-offline: '&cImpossible de trouver ce joueur. &7Le joueur &3{player} &7est
       hors ligne.'
@@ -106,12 +106,12 @@ command:
     player-not-exist: '&cIl n''y a pas de joueur avec le nom &4{player}&c. &7Typo?'
   get:
     confirmation: |
-      &cVeuillez confirmer cet achat. &7L'achat de ce spawner vous coûtera &c{cost} $&7.
+      &cVeuillez confirmer cet achat. &7L'achat de ce spawner vous coûtera &c{costs} $&7.
 
       [T]&7Confirmer : &8[&7CLICK&8][H]&7Cliquez ici pour confirmer cet achat.[/H][C]upgradeablespawners get {amount} confirm[/C][/T]
-    dropped: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{cost} $&7. &cCertain
+    dropped: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{costs} $&7. &cCertain
       sont tombées sur le sol, car il n''y avait plus de place dans votre inventaire.'
-    success: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{cost} $&7. Ils sont
+    success: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{costs} $&7. Ils sont
       maintenant dans votre inventaire.'
   list:
     retrieving: '&7Récupération des coordonnées des spawners placés du joueur {player}...'
