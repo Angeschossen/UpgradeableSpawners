@@ -106,7 +106,7 @@ command:
     player-not-exist: '&cIl n''y a pas de joueur avec le nom &4{player}&c. &7Typo?'
   get:
     confirmation: |
-      &cVeuillez confirmer cet achat. &7L'achat de ce spawner vous coûtera &c{coûts} $&7.
+      &cVeuillez confirmer cet achat. &7L'achat de ce spawner vous coûtera &c{cost} $&7.
 
       [T]&7Confirmer : &8[&7CLICK&8][H]&7Cliquez ici pour confirmer cet achat.[/H][C]upgradeablespawners get {amount} confirm[/C][/T]
     dropped: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{cost} $&7. &cCertain
