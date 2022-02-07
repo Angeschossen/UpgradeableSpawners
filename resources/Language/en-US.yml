@@ -1,27 +1,27 @@
 # Here you can edit all chat messages
 # GUI items and menus can be found in <language>_gui.yml
-#
+# 
 # If you encounter any issues or have questions, contact plugin support.
 # Plugin page: https://www.spigotmc.org/resources/authors/315463/
 # Discord: https://discord.gg/B4MAJVk
-#
+# 
 # ###############################
 # About chat message type system:
 # Does only work for messages in
 # "message" or "command" section.
 # ###############################
-#
+# 
 # You can use some codes to set the type
 # of a message to title, actionbar or chat.
 # How does it work:
-#
+# 
 # For example we want to print a message as a title:
 # Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
-#
+# 
 # You also send a message at the actionbar:
 # Set message to: '#a#This is a actionbar message.'
 # (Set #a# in front of it.)
-#
+# 
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
 
@@ -38,36 +38,54 @@ general:
     bossbar: '&7Wait &5{time} &7Second(s) until Teleportation.'
 message:
   general:
-    no-permission: '&cYou don''t have permission to do this. &7You need permission {permission}.'
+    no-permission: '&cYou don''t have permission to do this. &7You need permission
+      {permission}.'
   spawner:
     created: '#t#&e&lSpawner{newline}&7Successfully created'
     deleted: '#t#&e&lSpawner{newline}&cSuccessfully deleted'
     convert:
-      untrusted: '&cYou can''t claim this vanilla spawner, because you''re not trusted in this area.'
-      success: '&7You successfully claimed this vanilla spawner and converted it into a upgradeable spawner.'
+      untrusted: '&cYou can''t claim this vanilla spawner, because you''re not trusted
+        in this area.'
+      success: '&7You successfully claimed this vanilla spawner and converted it into
+        a upgradeable spawner.'
     egg: '#t#&e&lEntity-Type{newline}&7Successfully changed.'
   no-access:
     upgrade: '&cYou''re not allowed to upgrade this spawner. &7It belongs to &3{owner}&7.'
     delete: '&cYou''re not allowed to delete this spawner. &7It belongs to &3{owner}&7.'
     vanilla:
-      craft: '&cYou''re not allowed to craft normal spawners. &7Use &8/&espawners get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.craft'
-      place: '&cYou''re not allowed to place normal spawners. &7Use &8/&espawners get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.place'
-      egg: '&cYou''re not allowed to use this egg to change the spawners entity type. &7You can do that in the spawner menu.'
+      craft: '&cYou''re not allowed to craft normal spawners. &7Use &8/&espawners
+        get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.craft'
+      place: '&cYou''re not allowed to place normal spawners. &7Use &8/&espawners
+        get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.place'
+      egg: '&cYou''re not allowed to use this egg to change the spawners entity type.
+        &7You can do that in the spawner menu.'
   creation:
-    world: '&cYou''re not allowed to create upgradeable spawners in this world. &7An administrator needs to add world &3{world} &7to config: worlds_list'
-    owner: '&cYou can''t place this spawner. &7It belongs to player &3{owner}&7. &8An administrator can change that in config.'
-    max-per-chunk: '&cYou can''t place any more spawners in this chunk. &7The server only allows a maximum of &3{max} &7spawners in one chunk. &8An administrator can change this in config.'
-    max: '&cYou can''t create any more upgradeable spawners. &7Your maximum is &3{max}&7. &8Permission: uspawners.spawners.NUMBER'
-    only-claim: '&cYou can''t place any spawners here. &7You need to place them in your claims.'
+    world: '&cYou''re not allowed to create upgradeable spawners in this world. &7An
+      administrator needs to add world &3{world} &7to config: worlds_list'
+    owner: '&cYou can''t place this spawner. &7It belongs to player &3{owner}&7. &8An
+      administrator can change that in config.'
+    max-per-chunk: '&cYou can''t place any more spawners in this chunk. &7The server
+      only allows a maximum of &3{max} &7spawners in one chunk. &8An administrator
+      can change this in config.'
+    max: '&cYou can''t create any more upgradeable spawners. &7Your maximum is &3{max}&7.
+      &8Permission: uspawners.spawners.NUMBER'
+    only-claim: '&cYou can''t place any spawners here. &7You need to place them in
+      your claims.'
   silk:
-    enchantment: '&cWarning: You need a silktouch (level {level}) enchantement to mine this spawner. &7You won''t receive this spawner.'
-    permission: '&cWarning: You''re not allowed to mine this spawner with silktouch. &7You won''t receive this spawner. &8Permission: uspawners.silktouch'
+    enchantment: '&cWarning: You need a silktouch (level {level}) enchantement to
+      mine this spawner. &7You won''t receive this spawner.'
+    permission: '&cWarning: You''re not allowed to mine this spawner with silktouch.
+      &7You won''t receive this spawner. &8Permission: uspawners.silktouch'
   teleportation:
-    already: '&cYou can''t start a second teleportation. There''s already a teleportation in progress. &7Please wait until it''s done.'
-    started: '&7Teleportation process started. Teleporting in &5{sec} &7seconds. Please don''t move.'
-    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while you''re waiting &5{sec} &7seconds for teleportation.'
+    already: '&cYou can''t start a second teleportation. There''s already a teleportation
+      in progress. &7Please wait until it''s done.'
+    started: '&7Teleportation process started. Teleporting in &5{sec} &7seconds. Please
+      don''t move.'
+    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while
+      you''re waiting &5{sec} &7seconds for teleportation.'
     chunk: '#t#&9&lTeleported[newline]&7X: {x} Z: {z} Cost: &c{cost}'
-    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check your other plugins. &7This is not a UpgradeableSpawners issue.'
+    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check
+      your other plugins. &7This is not a UpgradeableSpawners issue.'
     unsafe: |
       &cTeleportation has been cancelled, because the destination is not safe.
 
@@ -78,20 +96,26 @@ command:
   general:
     cant-afford: '&cYou can''t afford this. &7You need &c{cost} &7money to do this.'
     player-offline: '&cCouldn''t find this player. &7Player &3{player} &7is offline.'
-    invalid-number: '&cYou entered an invalid number at the &e{argument} &cargument &7Please insert a valid number there.'
+    invalid-number: '&cYou entered an invalid number at the &e{argument} &cargument
+      &7Please insert a valid number there.'
     player-not-exist: '&cThere''s no player with the name &4{player}&c. &7Typo?'
   get:
     confirmation: |
       &cPlease confirm this purchase. &7Buying these spawner(s) will cost you &c{costs}&7.
 
       [T]&7Confirm: &8[&7CLICK&8][H]&7Click here to confirm this purchase.[/H][C]upgradeablespawners get {amount} confirm[/C][/T]
-    dropped: '&7You received &3{amount} &7spawner(s) for &c{cost}&7. &cSome dropped on the ground, because there was no space left in your inventory.'
-    success: '&7You received &3{amount} &7spawner(s) item for &c{cost}&7. They''re now in your inventory.'
+    dropped: '&7You received &3{amount} &7spawner(s) for &c{cost}&7. &cSome dropped
+      on the ground, because there was no space left in your inventory.'
+    success: '&7You received &3{amount} &7spawner(s) item for &c{cost}&7. They''re
+      now in your inventory.'
   list:
     retrieving: '&7Retrieving placed spawners coordinates of player {player}...'
   give:
-    type: '&cThis is not a valid entity type for your server version. &7Type &3{type} &7not found. Make sure you added it to entities.yml. &7List of possible entity types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html'
-    dropped: '&7You received &3{amount} &7spawner(s). &cThey dropped on the ground, because there was no space left in your inventory.'
+    type: '&cThis is not a valid entity type for your server version. &7Type &3{type}
+      &7not found. Make sure you added it to entities.yml. &7List of possible entity
+      types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html'
+    dropped: '&7You received &3{amount} &7spawner(s). &cThey dropped on the ground,
+      because there was no space left in your inventory.'
     success:
       sender: '&7You successfully gave &3{amount} &7spawners(s) to player &3{player}&7.'
       target: '&7You received &3{amount} &7spawners(s). They were put in your inventory.'
@@ -99,10 +123,13 @@ command:
     none: '&cYou''ve no teleportation that has been cancelled, because of the location
       being unsafe.'
   help:
-    header: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages} &7->---------'
-    footer: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages} &7->---------'
+    header: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages}
+      &7->---------'
+    footer: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages}
+      &7->---------'
     help: '&7Use &8/&3{cmd} help &7for help.'
-    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command &3{command} &7wasn''t found.'
+    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command &3{command} &7wasn''t
+      found.'
 help:
   command:
     help: '[T]&e/spawners {subcmd} &8[&epage&8] - &7Get help[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
@@ -110,7 +137,8 @@ help:
     list: '[T]&e/spawners {subcmd} &8[&eplayer&8]- &7View spawners[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
     give: '[T]&e/spawners {subcmd} &8<&eplayer&8> &8<&eentity&8> [&eamount&8] [&elevels...&8]
       - &7Give spawner(s)[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
-    confirmtp: '[T]&e/spawners {subcmd} &8- &7Confirm unsafe destination[H]&7Click to execute.[/H][SC]{cmd}[/SC][/T]'
+    confirmtp: '[T]&e/spawners {subcmd} &8- &7Confirm unsafe destination[H]&7Click
+      to execute.[/H][SC]{cmd}[/SC][/T]'
     admin:
       admin: '[T]&e/spawners {subcmd} &8- &7Admin commands[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
       reload: '[T]&e/spawners {subcmd} &8- &7Reload configurations[H]&7Click to execute.[/H][C]{cmd}[/C][/T]'
