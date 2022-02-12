@@ -1,21 +1,21 @@
 # Resource page: https://www.spigotmc.org/resources/authors/315463/
 # Discord: https://discord.gg/B4MAJVk
-# 
+#
 # If you encounter any issues, please report them
 # to discord support server or via pm.
 # Bugs or issues are mostly fixed within hours.
-# 
-# 
+#
+#
 # Here you can edit the whole GUI.
 # You can set GUI titles, the size and
 # item names, lores, materials and slots.
 # Don't remove any values or keys.
-# 
+#
 # You also can add new items to your GUI.
 # This can be done under gui.<GUI>.s.<YourItemName>
 # The name needs to be unique in this section.
 # Example:
-# 
+#
 # gui:
 #   lands:
 #     title: '&8Your Lands'
@@ -30,7 +30,7 @@
 #         - '  &7with &8/&3Lands menu&7.'
 #         material: 'RED_STAINED_GLASS_PANE'
 #         slot: 9
-# 
+#
 # Please note: You need to set all values
 # otherwise Lands will auto generate values.
 # Also you can't set items where list items
@@ -38,13 +38,13 @@
 # list in the Lands GUI goes from slot
 # 10 - 12 you can set any items with
 # the slot 10, 11, 12. They will be ignored.
-# 
-# 
+#
+#
 # You also can apply new placeholders.
 # This can be done under gui.<GUI>.p.<YourItemName>
 # The name needs to be unique in this section.
 # Example:
-# 
+#
 # gui:
 #   lands:
 #     p:
@@ -52,7 +52,7 @@
 #       material: 'GRAY_STAINED_GLASS_PANE'
 #       from: 1
 #       to: 9
-# 
+#
 # Please note: You need to set all values
 # otherwise Lands will auto generate values.
 # Also you can't set items where list items
@@ -64,12 +64,11 @@
 # You can set every item as a custom head:
 # Visit /https://minecraft-heads.com/custom-heads
 # Then copy the 'value:' and paste it at 'material:'
-# 
-# 
+#
+#
 # If you encounter any issues or you simply have
 # some questions, contact me via PM or Discord.
 # Discord: https://discord.gg/B4MAJVk
-
 
 general:
   wYes: '&aOui'
@@ -89,15 +88,19 @@ physical-item:
     - '&7pouvez créer un spawner'
     - '&7améliorable en le placant'
     - '&7quelque part.'
-    - ' '
+    - ''
     - '&eInformation'
     - '  &7Propriétaire : &3{owner}'
-    - '  &7Entitée: &3{entity}'
+    - '  &7Entitée : &3{entity}'
     - '  &7Intervalle : {interval}'
     - '  &7Periode de spawn : {amount}'
     - '  &7Distance du joueur : {range}'
     - '  &7Entitées maximum autour : {nearby}'
     material: SPAWNER
+  currency:
+    name: ''
+    lore: []
+    material: GOLD_INGOT
 skull:
   pig: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
   role:
@@ -140,7 +143,7 @@ gui:
         - '&7Actuel : &3{current}'
         - ''
         - '&7Prochain : {next}'
-        - '&7Coût:&c ${cost}'
+        - '&7Coût : &c{cost}'
         - ''
         - '&7Un intervalle de spawn court'
         - '&7veille à ce que les entitées'
@@ -153,7 +156,7 @@ gui:
         - '&7Actuel : &3{current} &7chaque &3{time}'
         - ''
         - '&7Prochain : {next}'
-        - '&7Coût : &c{cost} $'
+        - '&7Coût : &c{cost} '
         - ''
         - '&7Un plus grand taux de spawn'
         - '&7durant la période assure que'
@@ -171,7 +174,7 @@ gui:
         - '&7Actuelles : &3{current}'
         - ''
         - '&7Prochain : {next}'
-        - '&7Coût : &c{cost} $'
+        - '&7Coût : &c{cost} '
         - ''
         - '&7Une plus grande limite d''entitées à proximité'
         - '&7veille à ce que votre spawner'
@@ -185,7 +188,7 @@ gui:
         - '&7Actuelle : &3{current}'
         - ''
         - '&7Prochaine : {next}'
-        - '&7Coût : &c{cost} $'
+        - '&7Coût : &c{cost} '
         - ''
         - '&7Une plus grande distance'
         - '&7assure que le spawner'
@@ -220,13 +223,13 @@ gui:
         material: ACACIA_SIGN
         slot: 36
       paused_period:
-        name: '&cEn pause: Période'
+        name: '&cEn pause : Période'
         lore:
         - '&7Ce spawner est en pause, car'
         - '&7il a fait spawn le nombre maximum d''entitées'
         - '&7qui est de&3 {max} &7entitiées dans la même période.'
         - ' '
-        - '&7Il se réactivera dans:'
+        - '&7Il se réactivera dans :'
         - '&5~{reset}&7.'
         - ' '
         - '&7Vous pouvez améliorer la valeur de'
@@ -235,7 +238,7 @@ gui:
         slot: 36
     a:
       failure_max:
-        name: '&4Echec: &cNiveau maximum'
+        name: '&4Echec : &cNiveau maximum'
         lore:
         - '&7Valeur actuel : &3{current}'
         - ' '
@@ -252,7 +255,7 @@ gui:
         - '&7Vous n''avez pas assez'
         - '&7d''argent pour payer.'
         - ' '
-        - '&7Vous avez besoin de &c{cost} $&7.'
+        - '&7Vous avez besoin de &c{cost} &7.'
       failure_perm:
         name: '&4Echec : &cAmélioration vérrouillée'
         lore:
@@ -285,7 +288,7 @@ gui:
         - '&7le type d''entitée de'
         - '&7ce spawner.'
         - ''
-        - '&7Coût : &c{cost} $'
+        - '&7Coût : &c{cost} '
         - ''
         - '&8Permission:'
         - '&8{permission}'
@@ -302,7 +305,7 @@ gui:
         - '&7le type de l''entitée.'
         - ''
         - '&7Déverrouillé: {unlocked}'
-        - '&8Permission:'
+        - '&8Permission :'
         - '&8{permission}'
         material: PLAYER_HEAD
         from: 10
@@ -314,7 +317,7 @@ gui:
         - '&7Vous n''avez pas assez'
         - '&7d''argent pour payer.'
         - ''
-        - '&7Vous avez besoin &c {cost} $ &7.'
+        - '&7Vous avez besoin &c {cost}  &7.'
       failure_locked:
         name: '&4Echec : &cVerrouillé'
         lore:
@@ -424,7 +427,7 @@ gui:
         - ''
         - '&9Clique droit'
         - '&7Téléporte au spawner'
-        - '&7pour &c{cost} $&7.'
+        - '&7pour &c{cost} &7.'
         material: SPAWNER
         from: 10
         to: 45
@@ -436,7 +439,7 @@ gui:
         - ''
         - '&7Pour acheter un spawner,'
         - '&7executer : &8/&3Spawner get'
-        - '&7Un spawner coût : &c{cost} $'
+        - '&7Un spawner coût : &c{cost} '
         material: PAPER
         from: 10
         to: 45
@@ -444,7 +447,7 @@ gui:
       failure_cost:
         name: '&4Echec : &cPas assez d''argent'
         lore:
-        - '&7Vous avez besoin de &c{cost} $ &7pour payer'
+        - '&7Vous avez besoin de &c{cost}  &7pour payer'
         - '&7le coût de la téléportation.'
       failure_permission:
         name: '&4Echec : &cNon autorisé'

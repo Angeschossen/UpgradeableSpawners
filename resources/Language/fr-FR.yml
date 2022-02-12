@@ -86,19 +86,18 @@ message:
       &7secondes. S''il vous plaît, ne bougez pas.'
     cancelled: '&cVotre téléportation a été annulée. &7S''il vous plaît ne bougez
       pas pendant que vous attendez &5{sec} &7secondes pour la téléportation.'
-    chunk: '#t#&9&lTéléporté[newline]&7X : {x} Z : {z} Cost : &c{costs} $'
+    chunk: '#t#&9&lTéléporté[newline]&7X : {x} Z : {z} Cost : &c{costs} '
     plugin: '&cLa téléportation a été annulée par un plugin tier. &7Veuillez vérifier
       vos autres plugins. &7Ce n''est pas un problème d''UpgradeableSpawners.'
     unsafe: |
       &cLa téléportation a été annulée, car la destination n'est pas sécurisée.
-
        [T]&7Se téléporter quand même : &8[CLICK][H]&7Avertissement : La destination de téléportation n''est pas sûre et peut être dangereuse pour vous.[/H][C]{cmd}[/C][/T]
     corrected: '&7La destination de téléportation d''origine n’était pas sûre. &7Votre
       destination finale a été corrigée dans un endroit sûr.'
 command:
   general:
     cant-afford: '&cVous ne pouvez pas vous le permettre. &7Vous avez besoin de &c{costs}
-      $ &7 pour le faire.'
+      &7 pour le faire.'
     player-offline: '&cImpossible de trouver ce joueur. &7Le joueur &3{player} &7est
       hors ligne.'
     invalid-number: '&cVous avez entré un numéro non valide dans l''argument &e{argument}
@@ -106,12 +105,12 @@ command:
     player-not-exist: '&cIl n''y a pas de joueur avec le nom &4{player}&c. &7Typo?'
   get:
     confirmation: |
-      &cVeuillez confirmer cet achat. &7L'achat de ce spawner vous coûtera &c{costs} $&7.
+      &cVeuillez confirmer cet achat. &7L'achat de ce spawner vous coûtera &c{costs} &7.
 
       [T]&7Confirmer : &8[&7CLICK&8][H]&7Cliquez ici pour confirmer cet achat.[/H][C]upgradeablespawners get {amount} confirm[/C][/T]
-    dropped: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{costs} $&7. &cCertain
+    dropped: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{costs} &7. &cCertain
       sont tombées sur le sol, car il n''y avait plus de place dans votre inventaire.'
-    success: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{costs} $&7. Ils sont
+    success: '&7Vous avez reçu &3{amount} &7spawner(s) pour &c{costs} &7. Ils sont
       maintenant dans votre inventaire.'
   list:
     retrieving: '&7Récupération des coordonnées des spawners placés du joueur {player}...'
@@ -126,6 +125,9 @@ command:
         succès.'
       target: '&7Vous avez reçu &3{amount} &7spawner(s). Ils ont été mis dans votre
         inventaire.'
+  confirmtp:
+    none: '&cYou''ve no teleportation that has been cancelled, because of the location
+      being unsafe.'
   help:
     header: '[NoPrefix]&7---------<- &9Aide d''UpgradeSpawners &7Page &3{page} &8/
       &3{pages} &7->---------'
@@ -136,20 +138,19 @@ command:
       &7n''a pas été trouvé.'
 help:
   command:
-    help: '[T]&e/spawners help &8[&epage&8] - &7Afficher l''aide[H]&7Cliquer pour
-      copier.[/H][SC]upgradeablespawners help[/SC][/T]'
-    get: '[T]&e/spawners get &8- &7Obtenir un spawner[H]&7Cliquer pour copier.[/H][SC]upgradeablespawners
-      get[/SC][/T]'
-    list: '[T]&e/spawners list &8[&eplayer&8]- &7Voir la liste des spawners du joueur[H]&7Cliquer
-      pour copier.[/H][SC]upgradeablespawners list[/SC][/T]'
-    give: '[T]&e/spawners give &8<&eplayer&8> &8<&eentity&8> [&eamount&8] [&elevels...&8]
-      - &7Donner un spawner(s) au joueur[H]&7Cliquer pour copier.[/H][SC]upgradeablespawners
-      give[/SC][/T]'
+    help: '[T]&e/spawners {subcmd} &8[&epage&8] - &7Afficher l''aide[H]&7Cliquer pour
+      copier.[/H][SC]{cmd}[/SC][/T]'
+    get: '[T]&e/spawners {subcmd} &8- &7Obtenir un spawner[H]&7Cliquer pour éxécuter.[/H][SC]{cmd}[/SC][/T]'
+    list: '[T]&e/spawners {subcmd} &8[&eplayer&8]- &7Voir la liste des spawners du
+      joueur[H]&7Cliquer pour copier.[/H][SC]{cmd}[/SC][/T]'
+    give: '[T]&e/spawners {subcmd} &8<&eplayer&8> &8<&eentity&8> [&eamount&8] [&elevels...&8]
+      - &7Donner un spawner(s) au joueur[H]&7Cliquer pour copier.[/H][SC]{cmd}[/SC][/T]'
+    confirmtp: '[T]&e/spawners {subcmd} &8- &7Confirmer la téléportation sur la destination
+      non sécurisée[H]&7Cliquer pour éxécuter.[/H][SC]{cmd}[/SC][/T]'
     admin:
-      admin: '[T]&e/spawners admin &8- &7Commandes Admin[H]&7Cliquer pour copier.[/H][SC]upgradeablespawners
-        admin[/SC][/T]'
-      reload: '[T]&e/spawners reload &8- &7Recharger la configurations[H]&7Cliquer
-        pour copier.[/H][SC]upgradeablespawners reload[/SC][/T]'
+      admin: '[T]&e/spawners {subcmd} &8- &7Commandes Admin[H]&7Cliquer pour copier.[/H][SC]{cmd}[/SC][/T]'
+      reload: '[T]&e/spawners {subcmd} &8- &7Recharger la configurations[H]&7Cliquer
+        pour éxécuter.[/H][SC]{cmd}[/SC][/T]'
       paused_chunk:
         name: '&cPause'
         lore:
