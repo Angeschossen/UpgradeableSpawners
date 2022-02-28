@@ -42,22 +42,38 @@ spawn_interval:
     value: 10
     cost: 20000.0
 
-
-# Spawn amount
-# Set how many mobs attempt to spawn in each period.
-# The period can be configured in the config file.
-period_amount:
+# Spawn Amount
+# Set how many mobs attempt to spawn each time.
+# NOTE: This level type is disabled by default. You can enable it by
+# setting the item to display: true in your GUI language file.
+# NOTE: The actual spawning is handled by the server. That means if there is not enough space around the spawner,
+# it might spawn less in some cases to prevent issues.
+spawn_amount:
   1:
-    value: 2
+    value: 3
     cost: 0
   2:
     value: 4
     cost: 5000.0
   3:
     value: 5
+    cost: 9000.0
+
+# Period Amount
+# Set how many mobs attempt to spawn in each period.
+# The period can be configured in the config file.
+period_amount:
+  1:
+    value: 30
+    cost: 0
+  2:
+    value: 50
+    cost: 5000.0
+  3:
+    value: 80
     cost: 8000.0
   4:
-    value: 7
+    value: 120
     cost: 1000.0
 
 
