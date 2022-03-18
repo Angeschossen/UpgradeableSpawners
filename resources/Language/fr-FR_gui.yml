@@ -77,50 +77,40 @@ general:
   enabled: '&aActivé'
   disabled: '&cDésactivé'
   max: '&aMaximum atteint'
+  
   role:
     owner: '&4Propriétaire'
     visitor: '&7Visiteur'
+
 physical-item:
   spawner:
-    name: '&eSpawner de : &7{entity}'
+    name: '&e&lUpgradeable Spawner de : {entity}'
     lore:
-    - '&7Avec cette item vous'
-    - '&7pouvez créer un spawner'
-    - '&7améliorable en le placant'
-    - '&7quelque part.'
-    - ''
-    - '&eInformation'
-    - '  &7Propriétaire : &3{owner}'
-    - '  &7Entitée : &3{entity}'
-    - '  &7Intervalle : {interval}'
-    - '  &7Periode de spawn : {amount}'
-    - '  &7Distance du joueur : {range}'
-    - '  &7Entitées maximum autour : {nearby}'
+    - ' &8• &7Propriétaire : &3{owner}'
+    - ' &8• &7Entitée : &3{entity}'
+    - ' &8• &7Intervalle : {interval}'
+    - ' &8• &7Periode de spawn : {amount}'
+    - ' &8• &7Distance du joueur : {range}'
+    - ' &8• &7Entitées maximum autour : {nearby}'
+    - ' &8• &7Spawn amount : {count}'
     material: SPAWNER
   currency:
     name: ''
     lore: []
     material: GOLD_INGOT
+
 skull:
   pig: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
   role:
     owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJjMzExYTRmYjljNDkzODliNGY0NThjMjllOTY4MzI0YzU4MjNiOGE5OWVhZGUxNzQ3ODY2Yzk1YjA2NGEifX19
     visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+
+
 gui:
   main:
     title: '&8Menu de spawners'
-    size: 36
+    size: 45
     s:
-      close:
-        name: '&cFermer'
-        lore:
-        - '&7Fermer ce menu.'
-        - ''
-        - '&8- &7Vous pouvez le'
-        - '  &7réouvir en cliquant'
-        - '  &7sur le spawner.'
-        material: RED_STAINED_GLASS_PANE
-        slot: 9
       upgrades:
         name: '&6Améliorations'
         lore:
@@ -132,132 +122,128 @@ gui:
         name: '&6Configurations'
         lore:
         - '&7Sur cette rangée vous pouvez'
-        - '&7ajouter des joueurs pour'
-        - '&7configurer vos spawners.'
+        - '&7configurer les paramètre'
         material: COMMAND_BLOCK
-        slot: 20
+        slot: 29
     f:
       upgrade_spawn_interval:
         name: '&8> &6Intervalle'
         lore:
-        - '&7Actuel : &3{current}'
+        - '&8✖ &7Un intervalle de spawn court'
+        - '   &7veille à ce que les entitées'
+        - '   &7spawn plus fréquemment.'
         - ''
-        - '&7Prochain : {next}'
-        - '&7Coût : &c{cost}'
+        - '   &8• &7Actuel : {current}'
         - ''
-        - '&7Un intervalle de spawn court'
-        - '&7veille à ce que les entitées'
-        - '&7spawn plus fréquemment.'
+        - '   &8• &7Prochain : &a{next}'
+        - '     &7Coût : &c{cost}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3N2RhZmM4YzllYTA3OTk2MzMzODE3OTM4NjZkMTQ2YzlhMzlmYWQ0YzY2ODRlNzExN2Q5N2U5YjZjMyJ9fX0=
         slot: 13
       upgrade_period_amount:
         name: '&8> &6Spawn durant la période'
         lore:
-        - '&7Actuel : &3{current} &7chaque &3{time}'
+        - '&8✖ &7Améliore le nombre maximum d''entité'
+        - '   &7que l''on peut faire spawn toute les {time}&7.'
         - ''
-        - '&7Prochain : {next}'
-        - '&7Coût : &c{cost} '
+        - '   &8• &7Actuel : &3{current} &7chaque &3{time}'
         - ''
-        - '&7Un plus grand taux de spawn'
-        - '&7durant la période assure que'
-        - '&7votre spawner fasse spawn les'
-        - '&7entitée tout les {time}.'
+        - '   &8• &7Prochain : {next}'
+        - '     &7Coût : &c{cost}'
         - ''
-        - '&7Après que le nombre soit atteint,'
-        - '&7le spawner s''arrêtera jusqu''à'
-        - '&7ce que la période soit terminée.'
+        - ' &8• &7Après que le nombre soit atteint,'
+        - '   &7le spawner s''arrêtera jusqu''à'
+        - '   &7ce que la période soit terminée.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVhMjI0ODA3NjkzOTc4ZWQ4MzQzNTVmOWU1MTQ1ZjljNTZlZjY4Y2Y2ZjJjOWUxNzM0YTQ2ZTI0NmFhZTEifX19
         slot: 14
       upgrade_nearby_entities:
         name: '&8> &6Entitées proches'
         lore:
-        - '&7Actuelles : &3{current}'
+        - '&8✖ &7Améliore le maximum d''entité'
+        - '   &7pouvant être proche.'
         - ''
-        - '&7Prochain : {next}'
-        - '&7Coût : &c{cost} '
+        - '   &8• &7Actuel : &3{current}'
         - ''
-        - '&7Une plus grande limite d''entitées à proximité'
-        - '&7veille à ce que votre spawner'
-        - '&7fasse spawn de plus grands groupes'
-        - '&7d''entitées dans une même zone.'
+        - '   &8• &7Prochain : {next}'
+        - '     &7Coût : &c{cost}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGViZTdlNTIxNTE2OWE2OTlhY2M2Y2VmYTdiNzNmZGIxMDhkYjg3YmI2ZGFlMjg0OWZiZTI0NzE0YjI3In19fQ==
         slot: 15
       upgrade_player_range:
         name: '&8> &6Distance du joueur'
         lore:
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Améliore la distance maximum'
+        - '   &7que le joueur peut atteindre'
+        - '   &7avant que le spaner arrête de fonctionner'
         - ''
-        - '&7Prochaine : {next}'
-        - '&7Coût : &c{cost} '
+        - '   &8• &7Actuel : &3{current}'
         - ''
-        - '&7Une plus grande distance'
-        - '&7assure que le spawner'
-        - '&7fera spawn alors que vous'
-        - '&7vous trouvez plus loin.'
+        - '   &8• &7Prochain : {next}'
+        - '     &7Coût : &c{cost}'
         material: PLAYER_HEAD
         slot: 16
-      entity-type:
-        name: '&8> &6Choix du type d''entité'
+      upgrade_spawn_amount:
+        name: '&6&lSpawn Amount'
         lore:
-        - '&7Choisir le type d''entitée.'
-        - '&7Actuel : &3{type}'
+        - '&8✖ &7Upgrade the amount of entites'
+        - '   &7that are spawned each spawn interval.'
+        - ''
+        - '   &8• &7Actuel : {current}'
+        - ''
+        - '   &8• &7Prochain : &a{next}'
+        - '     &7Coût : &c{cost}'
         material: PLAYER_HEAD
-        slot: 22
-      butcher:
-        name: '&8> &6Butcher'
+        slot: 17
+        enabled: false
+      entity-type:
+        name: '&8> &6Choix du type d''entité : {type}'
         lore:
-        - '&7Est-ce que les entitées doivent'
-        - '&7être tuées instantanément ?'
-        - '&7Statut : {status}'
+        - '&8✖ &7Choisir le type d''entité.'
+        material: PLAYER_HEAD
+        slot: 31
+      butcher:
+        name: '&6&lBoucher : {status}'
+        lore:
+        - '&8✖ &7Est-ce que les entitées doivent être tuées instantanément ?'
         material: IRON_SWORD
-        slot: 23
+        slot: 32
       paused_chunk:
-        name: '&cEn pause'
+        name: '&4&lPause : Trop d''entités'
         lore:
         - '&7Ce spawner est mis en pause, car'
         - '&7il y a beaucoup trop d''entitées'
         - '&7dans la zone du spawner.'
         - ''
-        - '&7Entitées maximum: &3{max}'
-        - '&8Configurable dans la config.'
+        - ' &8• &7Entitées maximum : &3{max}'
         material: ACACIA_SIGN
-        slot: 36
+        slot: 45
       paused_period:
         name: '&cEn pause : Période'
         lore:
-        - '&7Ce spawner est en pause, car'
-        - '&7il a fait spawn le nombre maximum d''entitées'
-        - '&7qui est de&3 {max} &7entitiées dans la même période.'
-        - ' '
-        - '&7Il se réactivera dans :'
-        - '&5~{reset}&7.'
-        - ' '
-        - '&7Vous pouvez améliorer la valeur de'
-        - '&7la période du spawner plus haut.'
+        - '&cCe spawner est en pause, car'
+        - '&cil a fait spawn le nombre maximum d''entitées'
+        - '&cqui est de &3{max} &7entitiées dans la même période.'
+        - ''
+        - ' &8• &7Il se réactivera dans :'
+        - '   &5~{reset}&7.'
+        - ''
+        - ' &8• &7Vous pouvez améliorer la valeur de'
+        - '   &7la période du spawner plus haut.'
         material: ACACIA_SIGN
-        slot: 36
+        slot: 45
     a:
       failure_max:
-        name: '&4Echec : &cNiveau maximum'
+        name: '&4&lNiveau maximum atteinds'
         lore:
-        - '&7Valeur actuel : &3{current}'
-        - ' '
-        - '&7Ce spawner a déjà atteint'
-        - '&7le niveau maximum'
-        - '&7d''amélioration.'
-        - ' '
-        - '&8- &7Vous pouvez demander à'
-        - '  &7un administrateur pour'
-        - '  &7ajouter un nouveau niveau.'
+        - '&cCe spawner a déjà atteint'
+        - '&cle niveau maximum'
+        - '&cd''amélioration.'
+        - ''
+        - ' &8• &7Valeur actuel : &3{current}'
       failure_cost:
-        name: '&4Echec : &cCoût'
+        name: '&4&lPas asser d''argent'
         lore:
-        - '&7Vous n''avez pas assez'
-        - '&7d''argent pour payer.'
-        - ' '
-        - '&7Vous avez besoin de &c{cost} &7.'
+        - '&7Vous avez besoin de &c{cost} &7pour cela.'
       failure_perm:
-        name: '&4Echec : &cAmélioration vérrouillée'
+        name: '&4&lAmélioration vérrouillée'
         lore:
         - '&7Il vous manque une permission'
         - '&7{permission} pour améliorer'
@@ -266,210 +252,145 @@ gui:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
-        to: 36
+        to: 45
       placeholder_2:
         material: BLUE_STAINED_GLASS_PANE
         from: 12
         to: 12
       placeholder_3:
         material: BLUE_STAINED_GLASS_PANE
-        from: 21
-        to: 21
+        from: 30
+        to: 30
   entities:
-    title: '&8Entitées'
-    size: 36
+    title: '&8Entités'
+    size: 45
     l:
       object:
-        name: '&e{entity}'
+        name: '&e&l{entity}'
         lore:
-        - '&7Déverrouilé : {unlocked}'
+        - '&8✖ &7Définit le type d''entite''&7Déverrouilé : {unlocked}'
         - ''
-        - '&7Cliquez ici pour changer'
-        - '&7le type d''entitée de'
-        - '&7ce spawner.'
-        - ''
-        - '&7Coût : &c{cost} '
-        - ''
-        - '&8Permission:'
-        - '&8{permission}'
+        - '   &8• &7Coût : &c{cost} '
+        - '   &8• &7Déverrouilé : {unlocked}'
         material: PLAYER_HEAD
         from: 10
-        to: 27
+        to: 36
       purchased:
-        name: '&aAcheté : &e{entity}'
+        name: '&e&l{entity} &8&l(&a&lAcheté&8&l)'
         lore:
-        - '&7Vous avez déjà acheté'
-        - '&7un type d''entitée pour ce spawner.'
+        - '&8✖ &7Définir comme type entité.'
         - ''
-        - '&7Cliquez ici pour changer'
-        - '&7le type de l''entitée.'
-        - ''
-        - '&7Déverrouillé: {unlocked}'
-        - '&8Permission :'
-        - '&8{permission}'
+        - '   &8• &7le type de l''entitée.'
+        - '   &8• &7Déverrouillé: {unlocked}'
         material: PLAYER_HEAD
         from: 10
-        to: 27
+        to: 36
     a:
       failure_cost:
-        name: '&4Echec : &cCoût'
+        name: '&4&lPas assez d''argent'
         lore:
-        - '&7Vous n''avez pas assez'
-        - '&7d''argent pour payer.'
-        - ''
-        - '&7Vous avez besoin &c {cost}  &7.'
+        - '&7Vous avez besoin &c{cost}&7.'
       failure_locked:
-        name: '&4Echec : &cVerrouillé'
+        name: '&4&lEntité vérouillé'
         lore:
         - '&7Il vous manque des permissions'
-        - '&7{permission}'
         - '&7pour acheter cette entitée.'
     f:
       back:
-        name: '&cRetour'
+        name: '&c&lRetour'
         lore:
-        - '&7Retour à'
-        - '{back}&7.'
+        - '&8✖ &7Retour à'
+        - '   &7{back}.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 37
+      page_previous:
+        name: '&c&lPage précédente'
+        lore:
+        - '&8✖ &7Allez à la page précédente : &3{previous}'
+        material: ARROW
+        slot: 39
+      page_next:
+        name: '&a&lPage suivante'
+        lore:
+        - '&8✖ &7Allez à la page suivante : &3{next}'
+        material: ARROW
+        slot: 44
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 36
+        to: 45
+  player_list:
+    title: '&7Spawners améliorables'
+    size: 45
+    f:
+      back:
+        name: '&c&lRetour'
+        lore:
+        - '&8✖ &7Retour à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Page précédente'
+        name: '&c&lPage précédente'
         lore:
-        - '&7Allez à la page précédente : &9 {previous}'
-        - ''
-        - '&8- &7Actuelle : &3{current}'
+        - '&8✖ &7Allez à la page précédente : &3{previous}'
         material: ARROW
-        slot: 30
+        slot: 39
       page_next:
-        name: '&aPage suivante'
+        name: '&a&lPage suivante'
         lore:
-        - '&7Allez à la page suivante : &9{next}'
-        - ''
-        - '&8- &7Actuelle : &3{current}'
+        - '&8✖ &7Allez à la page suivante : &3{next}'
         material: ARROW
-        slot: 35
-    p:
-      placeholder_1:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 1
-        to: 9
-      placeholder_2:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 29
-        to: 36
-  action-confirm:
-    title: '&8Veuillez confirmer l''action'
-    size: 27
-    s:
-      info:
-        name: '&8> &6Confirmer l''action'
-        lore:
-        - '&7Cliquez &aOui &7pour confirmer ou'
-        - '&cNon &7pour annuler cette action.'
-        material: OAK_SIGN
-        slot: 14
-    l:
-      yes_spawner-delete:
-        name: '&aOUI'
-        lore:
-        - '&7Cliquez ici pour supprimer'
-        - '&7ce spawner.'
-        material: LIME_STAINED_GLASS_PANE
-        from: 10
-        to: 13
-      no_spawner-delete:
-        name: '&cNON'
-        lore:
-        - '&7Cliquez ici pour annuler'
-        - '&7cette action.'
-        material: RED_STAINED_GLASS_PANE
-        from: 15
-        to: 18
-    p:
-      placeholder_1:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 1
-        to: 9
-      placeholder_2:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 19
-        to: 27
-  player_list:
-    title: '&7Spawners améliorables'
-    size: 54
-    f:
-      page_previous:
-        name: '&9Page précédente'
-        lore:
-        - '&7Allez à la page précédente : &9{previous}'
-        - ''
-        - '&8- &7Actuelle : &b{current}'
-        material: ARROW
-        slot: 48
-      page_next:
-        name: '&aPage suivante'
-        lore:
-        - '&7Allez à la page suivante : &9{next}'
-        - ''
-        - '&8- &7Actuelle : &b{current}'
-        material: ARROW
-        slot: 52
+        slot: 43
     l:
       object:
-        name: '&6{0} : &7{1}, {2}, {3}, {4}'
+        name: '&6&l{0} : &7{1}, {2}, {3}, {4}'
         lore:
-        - '&7Ouvrir le menu du spawner.'
+        - '&8✖ &7Ouvrir le menu du spawner.'
         - ''
-        - '&7Intervalle : {5}'
-        - '&7Période de spawn : {6}'
-        - '&7Entitée max : {7}'
-        - '&7Distance de joueur: {8}'
+        - '&8✖ &9Clique droit'
+        - '   &7Téléporte au spawner'
+        - '   &7pour &c{cost}&7.'
         - ''
-        - '&9Clique droit'
-        - '&7Téléporte au spawner'
-        - '&7pour &c{cost} &7.'
+        - '&7&lStats'
+        - ' &8• &7Intervalle : {5}'
+        - ' &8• &7Période de spawn : {6}'
+        - ' &8• &7Entitée max : {7}'
+        - ' &8• &7Distance de joueur: {8}'
         material: SPAWNER
         from: 10
-        to: 45
+        to: 36
       object_none:
-        name: '&7Aucun spawner placé'
+        name: '&c&lAucun spawner placé'
         lore:
-        - '&7Vous n''avez pas encore placé'
-        - '&7de spawner améliorable.'
+        - '&7Pour acheter un spawner, executer'
+        - '&e/spawner get&7.'
         - ''
-        - '&7Pour acheter un spawner,'
-        - '&7executer : &8/&3Spawner get'
-        - '&7Un spawner coût : &c{cost} '
+        - ' &8• &7Un spawner coûte : &c{cost} '
         material: PAPER
         from: 10
-        to: 45
+        to: 36
     a:
       failure_cost:
-        name: '&4Echec : &cPas assez d''argent'
+        name: '&4&lPas assez d''argent'
         lore:
-        - '&7Vous avez besoin de &c{cost}  &7pour payer'
-        - '&7le coût de la téléportation.'
+        - '&7Vous avez besoin de &c{cost} &7pour cela'
       failure_permission:
-        name: '&4Echec : &cNon autorisé'
+        name: '&4&lPermission manquante'
         lore:
-        - '&7Vous n''avez pas la permission de faire ça.'
-        - '&8Permission: {permission}'
+        - '&7Vous n''avez pas la permission'
+        - '&7de faire ça.'
       failure_unloaded:
-        name: '&4Echec : &cChunk non chargé'
+        name: '&4&lChunk non chargé'
         lore:
         - '&7Vous ne pouvez pas ouvrir le menu'
         - '&7de spawner qui se trouvent'
         - '&7dans des régions non chargées.'
-    s:
-      close:
-        name: '&cFermer'
-        lore:
-        - '&7Fermer ce menu.'
-        - ''
-        - '&8- &7Vous pouvez le réouvrir'
-        - '  &7en exécutant : &8/&3Spawners list'
-        material: RED_STAINED_GLASS_PANE
-        slot: 9
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -477,5 +398,5 @@ gui:
         to: 9
       placeholder_2:
         material: GRAY_STAINED_GLASS_PANE
-        from: 45
-        to: 54
+        from: 36
+        to: 45
