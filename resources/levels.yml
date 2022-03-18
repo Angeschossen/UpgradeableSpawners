@@ -46,6 +46,7 @@ spawn_interval:
 # Set how many mobs attempt to spawn each time.
 # NOTE: This level type is disabled by default. You can enable it by
 # setting the item to display: true in your GUI language file.
+
 spawn_amount:
   1:
     value: 3
