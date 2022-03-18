@@ -77,398 +77,320 @@ general:
   enabled: '&aEnabled'
   disabled: '&cDisabled'
   max: '&aMax reached'
+  
   role:
     owner: '&4Owner'
     visitor: '&7Visitor'
+
 physical-item:
   spawner:
-    name: '&eSpawner Item: &7{entity}'
+    name: '&e&lUpgradeable Spawner: {entity}'
     lore:
-    - '&7With this item you'
-    - '&7can create an upgradeable'
-    - '&7spawner by placing it'
-    - '&7somewhere.'
-    - ''
-    - '&eInformation'
-    - '  &7Owner: &3{owner}'
-    - '  &7Entity: &3{entity}'
-    - '  &7Interval: {interval}'
-    - '  &7Period amount: {amount}'
-    - '  &7Player range: {range}'
-    - '  &7Max nearby: {nearby}'
+    - ' &8• &7Owner: &3{owner}'
+    - ' &8• &7Entity: &3{entity}'
+    - ' &8• &7Interval: {interval}'
+    - ' &8• &7Period amount: {amount}'
+    - ' &8• &7Player range: {range}'
+    - ' &8• &7Max nearby: {nearby}'
+    - ' &8• &7Spawn amount: {count}'
     material: SPAWNER
   currency:
     name: ''
     lore: []
     material: GOLD_INGOT
+
 skull:
   pig: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
   role:
     owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJjMzExYTRmYjljNDkzODliNGY0NThjMjllOTY4MzI0YzU4MjNiOGE5OWVhZGUxNzQ3ODY2Yzk1YjA2NGEifX19
     visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+
+
 gui:
   main:
     title: '&8Spawner Menu'
-    size: 36
+    size: 45
     s:
-      close:
-        name: '&cClose'
-        lore:
-        - '&7Close this menu.'
-        - ''
-        - '&8- &7You can open it again'
-        - '  &7by clicking the'
-        - '  &7spawner block.'
-        material: RED_STAINED_GLASS_PANE
-        slot: 9
       upgrades:
-        name: '&6Upgrades'
+        name: '&6&lUpgrades'
         lore:
         - '&7In this row you can'
         - '&7upgrade your spawner.'
         material: ENCHANTED_GOLDEN_APPLE
         slot: 11
       configurations:
-        name: '&6Configurations'
+        name: '&6&lConfigurations'
         lore:
         - '&7In this row you can'
-        - '&7trust players and'
-        - '&7configure your spawner.'
+        - '&7toggle settings.'
         material: COMMAND_BLOCK
-        slot: 20
+        slot: 29
     f:
       upgrade_spawn_interval:
-        name: '&8> &6Interval'
+        name: '&6&lSpawn Interval'
         lore:
-        - '&7Current: &3{current}'
+        - '&8✖ &7Upgrade the spawn interval.'
+        - '   &7A shorter spawn interval makes'
+        - '   &7your spawner spawn more often.'
         - ''
-        - '&7Next: {next}'
-        - '&7Cost: &c{cost}'
+        - '   &8• &7Current: {current}'
         - ''
-        - '&7A short spawn interval'
-        - '&7ensures that your spawner'
-        - '&7spawns more frequently.'
+        - '   &8• &7Next: &a{next}'
+        - '     &7Cost: &c{cost}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3N2RhZmM4YzllYTA3OTk2MzMzODE3OTM4NjZkMTQ2YzlhMzlmYWQ0YzY2ODRlNzExN2Q5N2U5YjZjMyJ9fX0=
         slot: 13
       upgrade_period_amount:
-        name: '&8> &6Spawns during Period'
+        name: '&6&lSpawns during Period'
         lore:
-        - '&7Current: &3{current} &7each &3{time}'
+        - '&8✖ &7Upgrade maximum amount of entities'
+        - '   &7that can spawn each {time}&7.'
         - ''
-        - '&7Next: {next}'
-        - '&7Cost: &c{cost}'
+        - '   &8• &7Current: {current}'
         - ''
-        - '&7A higher spawn amount per'
-        - '&7period will ensure that'
-        - '&7your spawner can spawn more'
-        - '&7entities each {time}.'
+        - '   &8• &7Next: &a{next}'
+        - '     &7Cost: &c{cost}'
         - ''
-        - '&7After the amount is reached,'
-        - '&7the spawner will stop until'
-        - '&7the period is over.'
+        - ' &8• &7After the amount is reached,'
+        - '   &7the spawner will stop until'
+        - '   &7the period is over.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVhMjI0ODA3NjkzOTc4ZWQ4MzQzNTVmOWU1MTQ1ZjljNTZlZjY4Y2Y2ZjJjOWUxNzM0YTQ2ZTI0NmFhZTEifX19
         slot: 14
       upgrade_nearby_entities:
-        name: '&8> &6Nearby Entities'
+        name: '&6&lNearby Entities'
         lore:
-        - '&7Current: &3{current}'
+        - '&8✖ &7Upgrade the maximum amount of'
+        - '   &7nearby entities.'
         - ''
-        - '&7Next: {next}'
-        - '&7Cost: &c{cost}'
+        - '   &8• &7Current: {current}'
         - ''
-        - '&7A higher max. nearby entities'
-        - '&7limit ensures that your'
-        - '&7spawner can spawn bigger groups'
-        - '&7of entities in one place.'
+        - '   &8• &7Next: &a{next}'
+        - '     &7Cost: &c{cost}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGViZTdlNTIxNTE2OWE2OTlhY2M2Y2VmYTdiNzNmZGIxMDhkYjg3YmI2ZGFlMjg0OWZiZTI0NzE0YjI3In19fQ==
         slot: 15
       upgrade_player_range:
-        name: '&8> &6Player Distance'
+        name: '&6&lPlayer Distance'
         lore:
-        - '&7Current: &3{current}'
+        - '&8✖ &7Upgade the maxmimum distance'
+        - '   &7players can be away until the'
+        - '   &7spawner stops spawning.'
         - ''
-        - '&7Next: {next}'
-        - '&7Cost: &c{cost}'
+        - '   &8• &7Current: {current}'
         - ''
-        - '&7A higher player range value'
-        - '&7ensures that your spawner'
-        - '&7will even spawn creatures'
-        - '&7while you''re far away.'
+        - '   &8• &7Next: &a{next}'
+        - '     &7Cost: &c{cost}'
         material: PLAYER_HEAD
         slot: 16
-      entity-type:
-        name: '&8> &6Set Entity Type'
+      upgrade_spawn_amount:
+        name: '&6&lSpawn Amount'
         lore:
-        - '&7Set the spawner''s entity type.'
-        - '&7Current: &3{type}'
+        - '&8✖ &7Upgrade the amount of entites'
+        - '   &7that are spawned each spawn interval.'
+        - ''
+        - '   &8• &7Current: {current}'
+        - ''
+        - '   &8• &7Next: &a{next}'
+        - '     &7Cost: &c{cost}'
         material: PLAYER_HEAD
-        slot: 22
+        slot: 17
+        enabled: false
+      entity-type:
+        name: '&6&lEntity Type: {type}'
+        lore:
+        - '&8✖ &7Change the spawners entity type.'
+        material: PLAYER_HEAD
+        slot: 31
       butcher:
-        name: '&8> &6Butcher'
+        name: '&6&lButcher: {status}'
         lore:
-        - '&7Should entities be instantly killed?'
-        - '&7Status: {status}'
+        - '&8✖ &7Should entities be instantly killed?'
         material: IRON_SWORD
-        slot: 23
+        slot: 32
       paused_chunk:
-        name: '&cPaused'
+        name: '&4&lPaused: Too many Entities'
         lore:
-        - '&7This spawner is paused, because'
-        - '&7there are too many entities in'
-        - '&7the area of this spawner.'
+        - '&cThis spawner is paused, because'
+        - '&cthere are too many entities in'
+        - '&cthe area of this spawner.'
         - ''
-        - '&7Max. entities: &3{max}'
-        - '&8Configureable in config.'
+        - ' &8• &7Max. entities: &3{max}'
         material: ACACIA_SIGN
-        slot: 36
+        slot: 45
       paused_period:
-        name: '&cPaused: Period'
+        name: '&4&lPaused: Period'
         lore:
-        - '&7This spawner is paused, because'
-        - '&7it spawned it''s maximum amount'
-        - '&7of &3{max} &7entities in the current period.'
+        - '&cThis spawner is paused, because it'
+        - '&cspawned its maximum amount of &c{max}'
+        - '&centities in the current period.'
         - ''
-        - '&7It will be active again in:'
-        - '&5~{reset}&7.'
+        - ' &8• &7It will be active again in:'
+        - '   &5~{reset}&7.'
         - ''
-        - '&7You can upgrade the period'
-        - '&7spawn amount above.'
+        - ' &8• &7You can upgrade the period'
+        - '   &7spawn amount above.'
         material: ACACIA_SIGN
-        slot: 36
+        slot: 45
     a:
       failure_max:
-        name: '&4Failure: &cMax Level'
+        name: '&4&lMax Level reached'
         lore:
-        - '&7Current value: &3{current}'
+        - '&cThis spawner already reached'
+        - '&cthe highest level for this'
+        - '&cupgrade.'
         - ''
-        - '&7This spawner already'
-        - '&7reached the highest level'
-        - '&7for this upgrade.'
-        - ''
-        - '&8- &7You can ask an'
-        - '  &7administrator to'
-        - '  &7setup a new level.'
+        - ' &8• &7Current value: &3{current}'
       failure_cost:
-        name: '&4Failure: &cCost'
+        name: '&4&lNot enough Money'
         lore:
-        - '&7You don''t have enough'
-        - '&7money to pay the cost.'
-        - ''
-        - '&7You need &c{cost}&7.'
+        - '&7You need &c{cost} &7for that.'
       failure_perm:
-        name: '&4Failure: &cUpgrades locked'
+        name: '&4&lUpgrades locked'
         lore:
-        - '&7You''re missing permission'
-        - '&7{permission} to upgrade'
+        - '&7You''re missing the permission'
+        - '&7to upgrade this level type for'
         - '&7any spawner.'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
-        to: 36
+        to: 45
       placeholder_2:
         material: BLUE_STAINED_GLASS_PANE
         from: 12
         to: 12
       placeholder_3:
         material: BLUE_STAINED_GLASS_PANE
-        from: 21
-        to: 21
+        from: 30
+        to: 30
   entities:
     title: '&8Entities'
-    size: 36
+    size: 45
     l:
       object:
-        name: '&e{entity}'
+        name: '&e&l{entity}'
         lore:
-        - '&7Unlocked: {unlocked}'
+        - '&8✖ &7Set as entity type.'
         - ''
-        - '&7Click here to change'
-        - '&7the entity type of this'
-        - '&7spawner.'
-        - ''
-        - '&7Cost: &c{cost}'
-        - ''
-        - '&8Permission:'
-        - '&8{permission}'
+        - '   &8• &7Cost: &c{cost}'
+        - '   &8• &7Unlocked: {unlocked}'
         material: PLAYER_HEAD
         from: 10
-        to: 27
+        to: 36
       purchased:
-        name: '&aPurchased:&e {entity}'
+        name: '&e&l{entity} &8&l(&a&lPurchased&8&l)'
         lore:
-        - '&7You already purchased the'
-        - '&7entity type for this spawner.'
+        - '&8✖ &7Set as entity type.'
         - ''
-        - '&7Click here to change'
-        - '&7the entity type.'
-        - ''
-        - '&7Unlocked: {unlocked}'
-        - '&8Permission:'
-        - '&8{permission}'
+        - '   &8• &7You already purchased this entity.'
+        - '   &8• &7Unlocked: {unlocked}'
         material: PLAYER_HEAD
         from: 10
-        to: 27
+        to: 36
     a:
       failure_cost:
-        name: '&4Failure: &cCost'
+        name: '&4&lNot enough Money'
         lore:
-        - '&7You don''t have enough'
-        - '&7money to pay the cost.'
-        - ''
-        - '&7You need &c{cost}&7.'
+        - '&7You need &c{cost} &7for that.'
       failure_locked:
-        name: '&4Failure: &cLocked'
+        name: '&4&lEntity locked'
         lore:
-        - '&7You''re missing permission'
-        - '&7{permission}'
-        - '&7to buy this mob type.'
+        - '&7You''re missing the permission'
+        - '&7to purchase this entity type.'
     f:
       back:
-        name: '&cBack'
+        name: '&c&lBack'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&8✖ &7Go back to'
+        - '   &7{back}.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 37
+      page_previous:
+        name: '&c&lPrevious Page'
+        lore:
+        - '&8✖ &7Go to the previous page: &3{previous}'
+        material: ARROW
+        slot: 39
+      page_next:
+        name: '&a&lNext Page'
+        lore:
+        - '&8✖ &7Go to the next page: &3{next}'
+        material: ARROW
+        slot: 44
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 36
+        to: 45
+  player_list:
+    title: '&8Upgradeable Spawners'
+    size: 45
+    f:
+      back:
+        name: '&c&lBack'
+        lore:
+        - '&8✖ &7Go back to'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Previous Page'
+        name: '&c&lPrevious Page'
         lore:
-        - '&7Go to previous page: &9{previous}'
-        - ''
-        - '&8- &7Current: &3{current}'
+        - '&8✖ &7Go to the previous page: &3{previous}'
         material: ARROW
-        slot: 30
+        slot: 39
       page_next:
-        name: '&aNext Page'
+        name: '&a&lNext Page'
         lore:
-        - '&7Go to next page: &9{next}'
-        - ''
-        - '&8- &7Current: &3{current}'
+        - '&8✖ &7Go to the next page: &3{next}'
         material: ARROW
-        slot: 35
-    p:
-      placeholder_1:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 1
-        to: 9
-      placeholder_2:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 29
-        to: 36
-  action-confirm:
-    title: '&8Please confirm this Action'
-    size: 27
-    s:
-      info:
-        name: '&8> &6Confirm this Action'
-        lore:
-        - '&7Click &aYes &7to confirm or'
-        - '&cNo &7to abort this action.'
-        material: OAK_SIGN
-        slot: 14
-    l:
-      yes_spawner-delete:
-        name: '&aYES'
-        lore:
-        - '&7Click here to delete'
-        - '&7this spawner.'
-        material: LIME_STAINED_GLASS_PANE
-        from: 10
-        to: 13
-      no_spawner-delete:
-        name: '&cNO'
-        lore:
-        - '&7Click here to abort'
-        - '&7this action.'
-        material: RED_STAINED_GLASS_PANE
-        from: 15
-        to: 18
-    p:
-      placeholder_1:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 1
-        to: 9
-      placeholder_2:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 19
-        to: 27
-  player_list:
-    title: '&7Upgradeable Spawners'
-    size: 54
-    f:
-      page_previous:
-        name: '&9Previous Page'
-        lore:
-        - '&7Go to previous page: &9{previous}'
-        - ''
-        - '&8- &7Current:&b {current}'
-        material: ARROW
-        slot: 48
-      page_next:
-        name: '&aNext Page'
-        lore:
-        - '&7Go to next page: &9{next}'
-        - ' '
-        - '&8- &7Current:&b {current}'
-        material: ARROW
-        slot: 52
+        slot: 43
     l:
       object:
-        name: '&6{0}: &7{1}, {2}, {3}, {4}'
+        name: '&6&l{0}: &7{1}, {2}, {3}, {4}'
         lore:
-        - '&7Open spawner menu.'
+        - '&8✖ &7Open the spawner menu.'
         - ''
-        - '&7Interval: {5}'
-        - '&7Spawns per period: {6}'
-        - '&7Max nearby: {7}'
-        - '&7Player range: {8}'
+        - '&8✖ &9RIGHT CLICK'
+        - '   &7Teleport to the spawner'
+        - '   &7for &c{cost}&7.'
         - ''
-        - '&9RIGHT CLICK'
-        - '&7Teleport to the spawner'
-        - '&7for &c{cost}&7.'
+        - '&7&lStats'
+        - ' &8• &7Interval: {5}'
+        - ' &8• &7Spawns per period: {6}'
+        - ' &8• &7Max nearby: {7}'
+        - ' &8• &7Player range: {8}'
         material: SPAWNER
         from: 10
-        to: 45
+        to: 36
       object_none:
-        name: '&7No Spawners placed'
+        name: '&c&lNo Spawners placed'
         lore:
-        - '&7You did not place any'
-        - '&7upgradeable spawners yet.'
+        - '&7To purchase a spawner, execute'
+        - '&e/spawner get&7.'
         - ''
-        - '&7To purchase a spawner,'
-        - '&7execute: &8/&3Spawner get'
-        - '&7One spawner costs: &c{cost}'
+        - ' &8• &7One spawner costs: &c{cost}'
         material: PAPER
         from: 10
-        to: 45
+        to: 36
     a:
       failure_cost:
-        name: '&4Failure: &cNot enough Money'
+        name: '&4&lNot enough Money'
         lore:
-        - '&7You need &c{cost} &7to pay'
-        - '&7the teleportation cost.'
+        - '&7You need &c{cost} &7for that.'
       failure_permission:
-        name: '&4Failure: &cNot allowed'
+        name: '&4&lMissing Permission'
         lore:
-        - '&7You have no permission to do this.'
-        - '&8Permission: {permission}'
+        - '&7You''re missing the permission to'
+        - '&7do this.'
       failure_unloaded:
-        name: '&4Failure: &cChunk unloaded'
+        name: '&4&lChunk unloaded'
         lore:
-        - '&7You can''t open the menu of a'
-        - '&7spawner, which is located in'
-        - '&7a unloaded region.'
-    s:
-      close:
-        name: '&cClose'
-        lore:
-        - '&7Close this menu.'
-        - ''
-        - '&8- &7You can open it again'
-        - '  &7by executing: &8/&3Spawners list'
-        material: RED_STAINED_GLASS_PANE
-        slot: 9
+        - '&cYou can''t open the menu of a'
+        - '&cspawner, which is located in'
+        - '&ca unloaded region.'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -476,5 +398,5 @@ gui:
         to: 9
       placeholder_2:
         material: GRAY_STAINED_GLASS_PANE
-        from: 45
-        to: 54
+        from: 36
+        to: 45
