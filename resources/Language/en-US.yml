@@ -1,45 +1,47 @@
 # Here you can edit all chat messages
 # GUI items and menus can be found in <language>_gui.yml
-# 
+#
 # If you encounter any issues or have questions, contact plugin support.
 # Plugin page: https://www.spigotmc.org/resources/authors/315463/
 # Discord: https://discord.gg/B4MAJVk
-# 
+#
 # ###############################
 # About chat message type system:
 # Does only work for messages in
 # "message" or "command" section.
 # ###############################
-# 
+#
 # You can use some codes to set the type
 # of a message to title, actionbar or chat.
 # How does it work:
-# 
+#
 # For example we want to print a message as a title:
 # Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
-# 
+#
 # You also send a message at the actionbar:
 # Set message to: '#a#This is a actionbar message.'
 # (Set #a# in front of it.)
-# 
+#
 # More information: https://github.com/Angeschossen/General/wiki/Messages
-
-
 
 general:
   prefix:
     normal: '&8[&eUpgradeSpawners&8] '
     help: '&8[&eUpgradeSpawners&8] &7Usage: '
+  
   time:
     seconds: second(s)
     minutes: minute(s)
     hours: hour(s)
+  
   teleportation:
     bossbar: '&7Wait &5{time} &7Second(s) until Teleportation.'
+
 message:
   general:
     no-permission: '&cYou don''t have permission to do this. &7You need permission
       {permission}.'
+  
   spawner:
     created: '#t#&e&lSpawner{newline}&7Successfully created'
     deleted: '#t#&e&lSpawner{newline}&cSuccessfully deleted'
@@ -49,6 +51,7 @@ message:
       success: '&7You successfully claimed this vanilla spawner and converted it into
         a upgradeable spawner.'
     egg: '#t#&e&lEntity-Type{newline}&7Successfully changed.'
+  
   no-access:
     upgrade: '&cYou''re not allowed to upgrade this spawner. &7It belongs to &3{owner}&7.'
     delete: '&cYou''re not allowed to delete this spawner. &7It belongs to &3{owner}&7.'
@@ -59,6 +62,7 @@ message:
         get &7to buy a spawner. &8Bypass permission: uspawners.bypass.vanilla.place'
       egg: '&cYou''re not allowed to use this egg to change the spawners entity type.
         &7You can do that in the spawner menu.'
+  
   creation:
     world: '&cYou''re not allowed to create upgradeable spawners in this world. &7An
       administrator needs to add world &3{world} &7to config: worlds_list'
@@ -71,11 +75,13 @@ message:
       &8Permission: uspawners.spawners.NUMBER'
     only-claim: '&cYou can''t place any spawners here. &7You need to place them in
       your claims.'
+  
   silk:
     enchantment: '&cWarning: You need a silktouch (level {level}) enchantement to
       mine this spawner. &7You won''t receive this spawner.'
     permission: '&cWarning: You''re not allowed to mine this spawner with silktouch.
       &7You won''t receive this spawner. &8Permission: uspawners.silktouch'
+  
   teleportation:
     already: '&cYou can''t start a second teleportation. There''s already a teleportation
       in progress. &7Please wait until it''s done.'
@@ -92,6 +98,7 @@ message:
        [T]&7Teleport anyways: &8[CLICK][H]&7Warning: The teleportation destination is not safe and might be dangerous for you.[/H][C]{cmd}[/C][/T]
     corrected: '&7The original teleport destination was unsafe. &7Your final destination
       has been corrected to a safe location.'
+
 command:
   general:
     cant-afford: '&cYou can''t afford this. &7You need &c{cost} &7money to do this.'
@@ -99,6 +106,7 @@ command:
     invalid-number: '&cYou entered an invalid number at the &e{argument} &cargument
       &7Please insert a valid number there.'
     player-not-exist: '&cThere''s no player with the name &4{player}&c. &7Typo?'
+  
   get:
     confirmation: |
       &cPlease confirm this purchase. &7Buying these spawner(s) will cost you &c{costs}&7.
@@ -108,8 +116,10 @@ command:
       on the ground, because there was no space left in your inventory.'
     success: '&7You received &3{amount} &7spawner(s) item for &c{cost}&7. They''re
       now in your inventory.'
+  
   list:
     retrieving: '&7Retrieving placed spawners coordinates of player {player}...'
+  
   give:
     type: '&cThis is not a valid entity type for your server version. &7Type &3{type}
       &7not found. Make sure you added it to entities.yml. &7List of possible entity
@@ -122,6 +132,7 @@ command:
   confirmtp:
     none: '&cYou''ve no teleportation that has been cancelled, because of the location
       being unsafe.'
+  
   help:
     header: '[NoPrefix]&7---------<- &9UpgradeSpawners Help &7Page &3{page} &8/ &3{pages}
       &7->---------'
@@ -130,6 +141,7 @@ command:
     help: '&7Use &8/&3{cmd} help &7for help.'
     cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command &3{command} &7wasn''t
       found.'
+
 help:
   command:
     help: '[T]&e/spawners {subcmd} &8[&epage&8] - &7Get help[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
@@ -139,16 +151,19 @@ help:
       - &7Give spawner(s)[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
     confirmtp: '[T]&e/spawners {subcmd} &8- &7Confirm unsafe destination[H]&7Click
       to execute.[/H][SC]{cmd}[/SC][/T]'
+    
     admin:
       admin: '[T]&e/spawners {subcmd} &8- &7Admin commands[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
       reload: '[T]&e/spawners {subcmd} &8- &7Reload configurations[H]&7Click to execute.[/H][C]{cmd}[/C][/T]'
+      
+      
       paused_chunk:
         name: '&cPaused'
         lore:
         - '&7This spawner is paused, because'
         - '&7there are too many entities in'
         - '&7the area of this spawner.'
-        - ' '
+        - ''
         - '&7Max. entities: &3{max}'
         - '&8Configureable in config.'
         material: ACACIA_SIGN
@@ -159,14 +174,15 @@ help:
         - '&7This spawner is paused, because'
         - '&7it spawned it''s maximum amount'
         - '&7of &3{max} &7entities in the current period.'
-        - ' '
+        - ''
         - '&7It will be active again in:'
         - '&5~{reset}&7.'
-        - ' '
+        - ''
         - '&7You can upgrade the period'
         - '&7spawn amount above.'
         material: ACACIA_SIGN
         slot: 36
+
 list:
   normal:
   - '&e{entity} Spawner'
@@ -174,6 +190,7 @@ list:
   - 'Spawns per period: {period}'
   - 'Nearby entities: {nearby}'
   - 'Player distance: {distance}'
+  
   paused:
     chunk:
     - '&cSpawner paused:'
