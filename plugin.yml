@@ -1,0 +1,64 @@
+name: 'UpgradeableSpawners'
+main: me.angeschossen.upgradeablespawners.UpgradeableSpawners
+version: ${project.version}
+author: 'Angeschossen'
+api-version: '1.13'
+website: 'https://www.spigotmc.org/resources/77717'
+description: 'Upgrade your spawners!'
+softdepend: [Lands, Vault, CMI, HolographicDisplays, WorldGuard, BentoBox, SuperiorSkyblock2, PlotSquared, WildStacker, UpgradeableHoppers]
+folia-supported: true
+
+commands:
+  upgradeablespawners:
+    aliases: [spawner, spawners]
+    description: UpgradeableSpawners main command.
+
+permissions:
+  uspawners.*:
+    description: Permission for all actions. Bypass included.
+    default: op
+    children:
+
+      uspawners.command.*:
+        description: Permission for all player commands.
+        children:
+          uspawners.command.get:
+            description: /upgradeablespawners get
+          uspawners.command.list:
+            description: /upgradeablespawners list
+          uspawners.command.confirmtp:
+            description: /upgradeablespawners confirmtp
+            
+      uspawners.admin.*:
+        description: Permission for all admin commands. This does not include bypass.
+        children:
+          uspawners.admin.command.give:
+            description: /upgradeablespawners give
+          uspawners.admin.command.reload:
+            description: /upgradeablespawners reload
+          uspawners.admin.command.admin:
+            description: /upgradeablespawners admin
+          uspawners.admin.command.list:
+            description: /upgradeablespawners list <player>
+
+      uspawners.bypass.*:
+        description: Permission for all bypasses.
+        children:
+          uspawners.bypass.delete:
+            description: Delete other players spawners.
+          uspawners.bypass.edit:
+            description: Upgrade other players spawners.
+          uspawners.bypass.ownership:
+            description: Bypass ownership when placing a spawner.
+          uspawners.bypass.only-land:
+            description: Bypass only-land option in config.yml and not being able to place spawners in lands they're not trusted in.
+
+      uspawners.spawners.<number>:
+        description: Set how many upgradeable spawners a player can have placed at once.
+      uspawners.silktouch:
+        description: Allow mining of spawners with silktouch. Only needed if activated in config.
+      uspawners.upgrade:
+        description: Only allow players with this permission to upgrade their spawners.
+      uspawners.drop-item:
+        description: Drop the spawner item when players break the spawner.
+

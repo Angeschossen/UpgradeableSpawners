@@ -1,0 +1,248 @@
+# General settings
+general:
+  # Default: English (en-US) - no download required.
+  # You can access translations maintained by the community in our Discord: https://discord.gg/B4MAJVk
+  # To access translations, other than en-US, execute /translations in the Discord server.
+  language: 'en-US'
+  # Worlds where players should be able to place upgradeable spawners.
+  # Use '*' to allow every world.
+  worlds_list:
+    - 'world'
+
+  # Set the format of all economy related displays.
+  # Info: https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html
+  # NOTE: This setting requires server reload / restart.
+  eco-format:
+    normal: '$#,##0.00'
+    # The short format will use the normal format if the value is lower than 1000.
+    # If the value is higher or equal than 1000, it will return {value} divided by 1000.
+    # This format is only used by a small amount of messages.
+    short: '${value}k'
+
+
+# General Teleportation Settings
+# Command specific teleportation options can be find in their sections.
+teleport:
+  # Set the cost of any teleportation to 0 for players that joined the server for the first time.
+  # You can define a time span here. Example: 1d = players that joined the server 23 hours ago, won't pay for any teleportation.
+  first-join_time: 0h
+  # Waittime
+  # Timeunit: seconds
+  wait: 3
+
+
+# Database settings
+database:
+  # MySQL
+  mysql:
+    # Enable this to use MySQL instead of "file based"
+    # SQLite. For performance improvement it's recommended to
+    # use MySQL. If you don't have access to a MySQL server,
+    # just let this disabled (false).
+    enabled: false
+    ip-address: 'localhost'
+    port: '3306'
+    database: 'upgradeablespawners'
+    table-prefix: ''
+    user: 'minecraft'
+    password: 'password'
+
+
+command:
+  # Should players need to confirm their purchase at /Spawner get?
+  get-confirm: false
+  # Set aliases for the /upgradeableSpawners command
+  # NOTE: This setting require server reload / restart.
+  alias:
+    upgradeablespawners_list:
+      - 'uspawners'
+      - 'uspawner'
+      - 'spawners'
+      - 'spawner'
+
+
+# Spawner Settings
+spawner:
+  # Allow only the owner
+  # of the spawner item
+  # to place it down.
+  only-owner: true
+  # Should all players be able to break spawners that aren't protected by any claiming plugin?
+  # The player who broke the spawners will be set as the new owner of the spawner item.
+  # NOTE: The owner of the spawner can always delete / break their spawners.
+  # NOTE: This setting requires server reload / restart.
+  visitor-break: false
+  # Allow changing the entity type of upgradeable spawner?
+  # If you also want to disable eggs, make sure to disable the setting below (vanilla.egg).
+  # You can also disable specific items in the GUI menu by adding enabled: false to the item configuration in the GUI language file.
+  entity-change: true
+  # Should spawners only be able to be mineable with a silktouch pickaxe?
+  # NOTE: If enabled, players still need the uspawners.silktouch permission to mine the spawners.
+  # Players with the uspawners.bypass.delete permission can bypass this and mine it without any pickaxe.
+  # If disabled, players can delete and get the spawner by using shift plus left click.
+  silktouch:
+    enabled_5: false
+    # Set the required minimum silktouch level.
+    min-level: 1
+    # Chance to retrieve the spawner in percent.
+    chance: 100
+    # Also allow the mining of vanilla spawners?
+    # NOTE: If the vanilla spawner convert option is enabled, then this setting won't have any influence as
+    # vanilla spawners will be converted into uspawners upon interaction.
+    # NOTE: If you want mined vanilla spawners be converted into uspawners, you need to enable option "enabled_2" below.
+    vanilla_2: false
+
+
+  # Item settings /Spawner get
+  item:
+    # Cost of the item,
+    # if you're taking it from
+    # /Spawner get
+    cost: 1500.0
+
+  # Restrict normal spawners, which are no upgradeable spawners, or other stuff like using eggs on spawners.
+  vanilla:
+    # Allow the placing of normal spawners?
+    placing: true
+    # Allow vanilla spawners to spawn entities?
+    spawn: true
+    # Allow changing the entity type of the spawner with a spawn egg?
+    egg: false
+    # Should vanilla spawners be converted into upgradeable spawners when a player interacts with them?
+    # NOTE: It is not possible to convert vanilla spawners without player interaction since the server does not
+    # provide a way to indentify the owner without interaction.
+    claim:
+      enabled_2: false
+      # Should the convert be allowed, even if the player reached his maximum amount of upgradeable spawners?
+      ignore-max: false
+      # Should spawners that spawn be converted? Please can claim it later and
+      # the spawner owner will be set to this player.
+      on-spawn: false
+
+  # Teleportation settings (/Spawners list)
+  # Permission: uspawners.teleport
+  teleportation:
+    # Set teleportation cost.
+    cost_2: 200
+
+  # Default settings. These only apply to new spawner creations.
+  # Available: BUTCHER
+  default-settings_list: [ ]
+
+  # Set amount of experience drops, if an entity dies that has been spawned by an upgradeable spawner.
+  # Use -1 to disable this option.
+  xp-drop: -1
+
+
+# Hologram above the spawner to show stats about the levels and entity type.
+hologram:
+  # This setting requires server reload / restart.
+  enabled_3: true
+  # Only show the hologram, if the spawner is paused?
+  only-paused: true
+  # Y offset - adjust the height
+  offset: 0
+
+
+protection:
+  # Protect spawners against explosives?
+  # If disabled, they will drop at a explosion.
+  anti-explosive: true
+
+
+# Limit Upgradeable Spawners
+limit:
+  # Scan areas for passed limits each interval.
+  interval_time: 30s
+  # Set the maximum amount of upgradeable spawners in one chunk.
+  # Disable: 0
+  max-per-chunk: 5
+  # Set area limits
+  area:
+    # Set the radius of chunks to be checked around the spawner.
+    # 0 = only the chunk, the spawner is located in (not recommended)
+    # 1 =
+    #     xxx  x = chunk
+    #     xsx  s = chunk in which the spawner is located.
+    #     xxx
+    chunk-radius: 2
+    # Set the max entity limit for the area. This only includes entities spawned by this ugradeablespawners.
+    # If this limit is reached, all upgradeable spawners in this area will be paused until
+    # there are less upgradebale spawner entities again.
+    # This does only take entities into account that were spawned by an upgradeable spawner.
+    # Disable: 0
+    max-entities: 150
+
+  # Set period of the period-amount upgrade.
+  # The period amount-upgrade can be disabled by disabling the menu item and setting the period time to 0.
+  # Disable menu items: https://github.com/Angeschossen/General/wiki/GUI-Menus#disable-items
+  period:
+    # Set the time of the period.
+    # Example: Allow the spawner to spawn x entities every 1 hour.
+    # The max amount of entities per period can be upgraded per spawner. Providing a useful upgrade and performance improvement at the same time.
+    # Timeunits: d, h, m, s
+    time_time: 1h
+
+
+# NOTE: These settings require server reload / restart.
+optimization:
+  redstone:
+    # Should spawners stop spawning if they're powered by redstone?
+    pause-on-signal: false
+
+
+# Economy settings
+economy:
+  # If all types are disabled, the item based economy will be used instead.
+  type:
+    # Vault: You need an economy plugin, which supports Vault, to let this work.
+    vault: true
+    # Use player experience as economy?
+    exp: false
+
+
+# 3rd party plugin integrations
+integration:
+  # Lands (https://www.spigotmc.org/resources/53313)
+  lands:
+    # Should players be allowed to place hoppers only in claimed areas?
+    # This disallows placing upgradeable hoppers in wilderness.
+    only-land: false
+    # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
+    # Allow players, which are trusted in the region where the
+    # spawner is located in, to break blocks, place blocks and
+    # interact, if they're allowed to do so in the region?
+    allow-region-members: true
+
+  # If this option is set to false, spawners will only spawn the maximum amount of nearby entites.
+  # That means, if maximum nearby entities is set to 10, the spawn amount can't be higher than 10.
+  # This option needs to be enabled, if you use a stacking plugin other than UpgradeableSpawners itself.
+  # If you're not using any stacking featuere you can disable this option to make sure that spawners
+  # don't spawn more entities at once than their max. nearby entities amount.
+  3rd-party-stacking: false
+
+  # Economy settings
+  # If all types are disabled, the item based economy will be used instead.
+  # NOTE: When changing these option you might also want to adjust the "eco-format" in this config.
+  economy:
+    vault:
+      # You need an economy plugin, which supports Vault, to let this work.
+      enabled_10: true
+      # Server bank account name. Spendings go here.
+      server-bank: ''
+    # Player experience
+    exp:
+      enabled_15: false
+    # Item currency is used when all other economy options are disabled or unavailable.
+    # The currency item can be edited in the GUI language file at the "currency" item.
+    items:
+      # If enabled, only items that have the same name, lore etc. will belong to the currency.
+      # Not just items of the same type or items with the same model-data.
+      strict: false
+
+
+# Configure logging
+logging:
+  # We might ask you to enable this, when you submit a bugreport.
+  debug: false
+
