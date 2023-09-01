@@ -1,1 +1,3 @@
-- Fixed: [#2367] Issue with ChunkLoadEvent
+- Fixed: item stack not increasing in size making it look like spawner is paused after region reload
++ Improved: no ai set aware re applying at area load
++ Added: Option to disable entity push in stacking.yml
