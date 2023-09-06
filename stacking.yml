@@ -1,3 +1,5 @@
+# All options in this config, except the "remove-ai" option, only apply to stacked entities.
+
 entity:
   # Should spawned entities be stacked?
   stacking:
@@ -9,6 +11,9 @@ entity:
     # 0 means unlimited
     max-size: 500
 
+  # Should stacked entities receive knockback when they get hit?
+  knockback: true
+
   # Should spawned entities be able to move on their own?
   # If set to false, these entities will not move, but will still be pushed by water etc.
   # This helps to improve server performance.
@@ -19,4 +24,4 @@ entity:
     pushing: true
     # Here you can add entity types that should keep AI.
     # List of entity types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
-    blacklist_list: []
+    blacklist_list: [ ]

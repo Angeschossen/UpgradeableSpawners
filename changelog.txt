@@ -1,3 +1,2 @@
-- Fixed: item stack not increasing in size making it look like spawner is paused after region reload
-+ Improved: no ai set aware re applying at area load
-+ Added: Option to disable entity push in stacking.yml
++ Added: knockback option for stacked entities in stacking.yml
+- Fixed: [#2355] Spawner stopping to spawn and need to be paused and resumed to spawn again
