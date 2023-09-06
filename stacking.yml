@@ -15,6 +15,7 @@ entity:
   remove-ai:
     enabled: false
     # Should entities without AI be able to be pushed around? This also affects knockback when hitting a stacked entity.
+    # Besides that, entities won't fall if spawned in the AIR, if this option is disabled.
     pushing: true
     # Here you can add entity types that should keep AI.
     # List of entity types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
