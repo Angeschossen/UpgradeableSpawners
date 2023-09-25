@@ -1,2 +1,1 @@
-+ Added: knockback option for stacked entities in stacking.yml
-- Fixed: [#2355] Spawner stopping to spawn and need to be paused and resumed to spawn again
+- Fixed: Mined vanilla spawners with silktouch change entity type upon placement
