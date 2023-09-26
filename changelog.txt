@@ -1,1 +1,1 @@
-- Fixed: Mined vanilla spawners with silktouch change entity type upon placement
+- Fixed: API event call
