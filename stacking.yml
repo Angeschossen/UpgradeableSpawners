@@ -10,6 +10,7 @@ entity:
     # Max stack size
     # 0 means unlimited
     max-size: 500
+    item: true
 
   # Should stacked entities receive knockback when they get hit?
   knockback: true
