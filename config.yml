@@ -20,9 +20,15 @@ general:
     # This format is only used by a small amount of messages.
     short: '${value}k'
 
+  # If enabled, limit permissions will be combined instead of just taking the highest value.
+  # Example: A player has the permission uspawners.spawners.5 and uspawners.spawners.2.
+  #          If enabled: This will result in a limit of 7 spawners.
+  #          If disabled: This will result in a limit of 5 spawners.
+  permission-stacking: false
+
 
 # General Teleportation Settings
-# Command specific teleportation options can be find in their sections.
+# Command specific teleportation options can be found in their sections.
 teleport:
   # Set the cost of any teleportation to 0 for players that joined the server for the first time.
   # You can define a time span here. Example: 1d = players that joined the server 23 hours ago, won't pay for any teleportation.

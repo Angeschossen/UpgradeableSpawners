@@ -1,1 +1,1 @@
-- Fixed: API event call
++ Added: [Suggestion] take limit.max-per-chunk into account at spawner conversion
