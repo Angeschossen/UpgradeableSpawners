@@ -1,1 +1,3 @@
-+ Added: [Suggestion] take limit.max-per-chunk into account at spawner conversion
++ Added: Option to count stacked entities towards nearby entities limit
+    # Should the stack size be counted towards the nearby entities limit from levels.yml?
+    count-stack-amount: false

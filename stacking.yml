@@ -10,7 +10,8 @@ entity:
     # Max stack size
     # 0 means unlimited
     max-size: 500
-    item: true
+    # Should the stack size be counted towards the nearby entities limit from levels.yml?
+    count-stack-amount: false
 
   # Should stacked entities receive knockback when they get hit?
   knockback: true
