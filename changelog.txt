@@ -1,3 +1,2 @@
-+ Added: Option to count stacked entities towards nearby entities limit
-    # Should the stack size be counted towards the nearby entities limit from levels.yml?
-    count-stack-amount: false
+- Fixed: Initial spawner status after placement
+- Fixed: Max period amount hologram
