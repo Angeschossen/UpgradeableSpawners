@@ -252,4 +252,6 @@ integration:
 logging:
   # We might ask you to enable this, when you submit a bugreport.
   debug: false
+  # Identify caller of events etc.
+  print-callstack_list: []
 

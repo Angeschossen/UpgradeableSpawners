@@ -1,2 +1,9 @@
-- Fixed: Initial spawner status after placement
-- Fixed: Max period amount hologram
+The old custom head textures are no longer supported by the server.
+Therefore, you need to change any custom heads in your GUI and entities.yml files to the new
+skin URLs.
+
+Here, you can find more information on how to do that: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/New-Head-Textures
+If you want to use the new default custom player heads:
+The default GUI custom heads can be found here: https://github.com/Angeschossen/Lands/blob/master/definitions_gui.yml
+The default role custom heads can be found here: https://github.com/Angeschossen/Lands/blob/master/roles.yml
+If you don't do this, you'll receive lots of spam from the server in your console log.
