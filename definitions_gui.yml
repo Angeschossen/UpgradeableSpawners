@@ -1,0 +1,104 @@
+physical:
+  spawner:
+    material: SPAWNER
+  currency:
+    material: GOLD_INGOT
+
+skull:
+  pig: skin:bee8514892f3d78a32e8456fcbb8c6081e21b246d82f398bd969fec19d3c27b3
+
+
+# Common Sounds
+# These are applied to all items starting with the defined prefix.
+common_sounds:
+  # Play a sound when the item is set in the menu.
+  set:
+    # Each item starting with [item_type]_failure_<name> will have this sound set.
+    # You can still override the "sound_set" for any item in their sections.
+    failure: ENTITY_VILLAGER_NO
+
+
+common:
+  size: 45
+  entries: [ 10-36 ]
+  items:
+    default:
+      back:
+        material: RED_STAINED_GLASS_PANE
+        slots: 37
+      refresh_page_previous:
+        material: ARROW
+        slots: 39
+      refresh_page_next:
+        material: ARROW
+        slots: 44
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        slots: 1-45
+gui:
+  main:
+    items:
+      default:
+        upgrade_spawn_interval:
+          material: CLOCK
+          slots: 11
+        upgrade_period_amount:
+          material: skin:a0a19e23d21f2db063cc55e99ae874dc8b23be779be34e52e7c7b9a25
+          slots: 12
+        upgrade_nearby_entities:
+          material: skin:cc596a41daea51be2e9fec7de2d89068e2fa61c9d57a8bdde44b55937b6037
+          slots: 13
+        upgrade_player_range:
+          material: PLAYER_HEAD
+          slots: 15
+        upgrade_spawn_amount:
+          material: skin:b85d4fda56bfeb85124460ff72b251dca8d1deb6578070d612b2d3adbf5a8
+          slots: 14
+        entity-type:
+          material: INHERIT
+          slots: 29
+        butcher:
+          material: IRON_SWORD
+          slots: 30
+        butcher_forced_entity:
+          material: IRON_SWORD
+          slots: 30
+        status_paused_period_amount:
+          material: 'RED_WOOL'
+          slots: 33
+        status_paused_area_max_entities:
+          material: 'RED_WOOL'
+          slots: 33
+        status_paused_nearby_entities:
+          material: 'RED_WOOL'
+          slots: 33
+        status_paused_redstone_signal:
+          material: 'RED_WOOL'
+          slots: 33
+        status_paused_manually:
+          material: 'RED_WOOL'
+          slots: 33
+        status_running:
+          material: 'GREEN_WOOL'
+          slots: 33
+        tip_upgradeablehoppers:
+          material: HOPPER
+          slots: 45
+        tip_upgradeablehoppers_connected:
+          material: HOPPER
+          slots: 45
+          enchanted: true
+
+  list_entities:
+    items:
+      default:
+        entry_entity:
+          material: INHERIT
+        entry_entity_purchased:
+          material: INHERIT
+
+  list_player_spawners:
+    items:
+      default:
+        entry_object:
+          material: 'SPAWNER'
