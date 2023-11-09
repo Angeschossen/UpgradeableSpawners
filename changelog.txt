@@ -4,6 +4,6 @@ skin URLs.
 
 Here, you can find more information on how to do that: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/New-Head-Textures
 If you want to use the new default custom player heads:
-The default GUI custom heads can be found here: https://github.com/Angeschossen/Lands/blob/master/definitions_gui.yml
-The default role custom heads can be found here: https://github.com/Angeschossen/Lands/blob/master/roles.yml
+The default GUI custom heads can be found here: https://github.com/Angeschossen/UpgradeableSpawners/blob/master/definitions_gui.yml
+The default role custom heads can be found here: https://github.com/Angeschossen/UpgradeableSpawners/blob/master/entities.yml
 If you don't do this, you'll receive lots of spam from the server in your console log.

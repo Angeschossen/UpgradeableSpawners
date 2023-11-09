@@ -4,10 +4,6 @@ physical:
   currency:
     material: GOLD_INGOT
 
-skull:
-  pig: skin:bee8514892f3d78a32e8456fcbb8c6081e21b246d82f398bd969fec19d3c27b3
-
-
 # Common Sounds
 # These are applied to all items starting with the defined prefix.
 common_sounds:

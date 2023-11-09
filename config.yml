@@ -253,5 +253,6 @@ logging:
   # We might ask you to enable this, when you submit a bugreport.
   debug: false
   # Identify caller of events etc.
+  # Available: chunk_load_unload
   print-callstack_list: []
 
