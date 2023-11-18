@@ -126,6 +126,10 @@ spawner:
       # the spawner owner will be set to this player.
       on-spawn: false
 
+  # If disabled, no jockes will spawn at all. Not just from spawners.
+  # It's not possible to distingush if a jockes spawn as a result of an entity from an spawner.
+  jockeys: true
+
   # Teleportation settings (/Spawners list)
   # Permission: uspawners.teleport
   teleportation:
