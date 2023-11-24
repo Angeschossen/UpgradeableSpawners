@@ -1,4 +1,1 @@
-+ Added: Option to disable jockeys
-  # If disabled, no jockes will spawn at all. Not just from spawners.
-  # It's not possible to distingush if a jockes spawn as a result of an entity from an spawner.
-  jockeys: true
+- Fixed: Jockey disable
