@@ -1,7 +1,7 @@
 # Here you can edit the spawner levels.
 # You can add an infinitive amount of levels.
 # To disable a level, just hide the menu item (https://github.com/Angeschossen/General/wiki/GUI-Menus#disable-items)
-# and set your default level here. For any help join oru Discord: https://discord.gg/B4MAJVk
+# and set your default level here. For any help join our Discord: https://discord.gg/B4MAJVk
 
 # Spawn interval - Lower is better
 # This is the delay, in seconds, until the spawner will spawn its next mob.

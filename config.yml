@@ -99,6 +99,11 @@ spawner:
     # NOTE: If you want mined vanilla spawners be converted into uspawners, you need to enable option "enabled_2" below.
     vanilla_2: false
 
+  # Tools which can be used to retrieve the spawner.
+  # ALL: allows all tools, including none.
+  # Available materials: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  allowed-tools_list:
+    - ALL
 
   # Item settings /Spawner get
   item:
@@ -122,11 +127,11 @@ spawner:
       enabled_2: false
       # Should the convert be allowed, even if the player reached his maximum amount of upgradeable spawners?
       ignore-max: false
-      # Should spawners that spawn be converted? Please can claim it later and
+      # Should spawners that spawn be converted? Players can claim it later and
       # the spawner owner will be set to this player.
       on-spawn: false
 
-  # If disabled, no jockes will spawn at all. Not just from spawners.
+  # If disabled, no jockeys will spawn at all. Not just from spawners.
   # It's not possible to distingush if a jockes spawn as a result of an entity from an spawner.
   jockeys: true
 
