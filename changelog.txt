@@ -1,2 +1,2 @@
-- Fixed: [#2484] [#2470] Entity spawning on 1.20.4
-- Fixed: Period entities on spawner replace
+- Fixed: [#2477] Entity spawning on 1.20.1
+- Fixed: get-confirm option
