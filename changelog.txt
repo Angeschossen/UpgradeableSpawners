@@ -1,5 +1,5 @@
 ${project.version}
 + Added: You can now disable every teleportation by unsetting the following permissions:
-https://github.com/Angeschossen/Lands/wiki/Permissions#teleportation
+https://github.com/Angeschossen/UpgradeableSpawners/wiki/Permissions#teleportation
 
 - Fixed: Debug
