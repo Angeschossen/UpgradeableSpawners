@@ -62,3 +62,9 @@ permissions:
       uspawners.drop-item:
         description: Drop the spawner item when players break the spawner.
 
+      uspawners.teleport.*:
+        description: Allow all teleportation.
+        children:
+          uspawners.teleport.spawner:
+            description: Allow teleportation to placed spawners via /uspawners list.
+            default: true

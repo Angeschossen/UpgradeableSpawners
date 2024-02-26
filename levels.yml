@@ -96,6 +96,7 @@ player_range:
 # Max nearby entities
 # Set the maximum number of similar entities that are allowed to be within spawning range of this spawner.
 nearby_entities:
+  enabled: true
   1:
     value: 8
     cost: 0
