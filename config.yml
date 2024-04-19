@@ -26,6 +26,31 @@ general:
   #          If disabled: This will result in a limit of 5 spawners.
   permission-stacking: false
 
+  # Date format
+  # MM: Month
+  # dd: Day of month
+  # yyyy: Year
+  # hh: hours
+  # mm: minutes
+  # ss: seconds
+  # NOTE: These settings require server reload / restart.
+  date-format:
+    # Set the time zone for date text outputs.
+    # Example: America/Los_Angeles or GMT-8:00
+    # List of time zones: https://timezonedb.com/time-zones
+    # If empty, it uses the time zone of the machine your server is running on.
+    time-zone: ''
+    # General format for invites etc.
+    # Examples:
+    #   American 12-hour format (a = 12 hour format): MM/dd/yyyy hh:mm a
+    #   German 24-hour format: dd.MM.yyyy hh:mm
+    general: 'MM/dd/yyyy hh:mm a'
+    # Format used when only a time displayed.
+    # Examples:
+    #   American 12-hour format (a = 12 hour format): hh:mm a
+    #   German 24-hour format: hh:mm
+    time_2: 'hh:mm a'
+
 
 # General Teleportation Settings
 # Command specific teleportation options can be found in their sections.
@@ -149,6 +174,14 @@ spawner:
   # Use -1 to disable this option.
   xp-drop: -1
 
+  butcher-mode:
+    # Only supports UpgradeableHoppers: https://www.spigotmc.org/resources/69201
+    hopper:
+      # Require an upgradeablehopper to be placed underneath the spawner before butcher mode can be activated?
+      required: false
+      # Should loot be dropped, if the upgradeable hopper is full?
+      drop-loot: true
+
 
 # Hologram above the spawner to show stats about the levels and entity type.
 hologram:
@@ -244,11 +277,16 @@ integration:
     vault:
       # You need an economy plugin, which supports Vault, to let this work.
       enabled_10: true
-      # Server bank account name. Spendings go here.
+      # Server bank account name. Upkeep will go here. Empty means, that this feature is disabled.
       server-bank: ''
     # Player experience
     exp:
       enabled_15: false
+    # Player levels
+    # Not recommended, since each player level has their own amount of experience.
+    # It's recommended to use exp instead.
+    level:
+      enabled_16: false
     # Item currency is used when all other economy options are disabled or unavailable.
     # The currency item can be edited in the GUI language file at the "currency" item.
     items:
@@ -263,5 +301,5 @@ logging:
   debug: false
   # Identify caller of events etc.
   # Available: chunk_load_unload
-  print-callstack_list: []
+  print-callstack_list: [ ]
 

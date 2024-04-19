@@ -1,5 +1,9 @@
-${project.version}
-+ Added: You can now disable every teleportation by unsetting the following permissions:
-https://github.com/Angeschossen/UpgradeableSpawners/wiki/Permissions#teleportation
-
-- Fixed: Debug
++ Added: /spawner admin killall
++ Added: Options for butcher mode:
+      butcher-mode:
+        # Only supports UpgradeableHoppers: https://www.spigotmc.org/resources/69201
+        hopper:
+          # Require an upgradeablehopper to be placed underneath the spawner before butcher mode can be activated?
+          required: false
+          # Should loot be dropped, if the upgradeable hopper is full?
+          drop-loot: true

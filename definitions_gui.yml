@@ -59,6 +59,9 @@ gui:
         butcher_forced_entity:
           material: IRON_SWORD
           slots: 30
+        status_paused_butcher_hopper_missing:
+          material: 'RED_WOOL'
+          slots: 33
         status_paused_period_amount:
           material: 'RED_WOOL'
           slots: 33
