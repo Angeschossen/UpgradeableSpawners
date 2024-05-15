@@ -1,9 +1,6 @@
-+ Added: /spawner admin killall
-+ Added: Options for butcher mode:
-      butcher-mode:
-        # Only supports UpgradeableHoppers: https://www.spigotmc.org/resources/69201
-        hopper:
-          # Require an upgradeablehopper to be placed underneath the spawner before butcher mode can be activated?
-          required: false
-          # Should loot be dropped, if the upgradeable hopper is full?
-          drop-loot: true
++ Added: Merge entities into stacks (entities.yml)
+    # Merge entities into one stack
+    merge:
+      # Merge entities every specified interval.
+      # Can be disabled by setting interval to something lower than 1.
+      interval_time: 30s

@@ -11,6 +11,12 @@ entity:
     # 0 means unlimited
     max-size: 500
 
+    # Merge entities into one stack
+    merge:
+      # Merge entities every specified interval.
+      # Can be disabled by setting interval to something lower than 1.
+      interval_time: 30s
+
   # Should stacked entities receive knockback when they get hit?
   knockback: true
 
