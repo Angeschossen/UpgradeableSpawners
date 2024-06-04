@@ -4,6 +4,8 @@ entity:
   # Should spawned entities be stacked?
   stacking:
     enabled_2: true
+    # Only stack entities that were spawned by an upgradeable spawner?
+    only-spawner: true
     # Should entites, spawned by vanilla spawners, be stacked too?
     # NOTE: This option requires server reload / restart.
     vanilla: false
