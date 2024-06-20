@@ -1,5 +1,1 @@
-+ Added: Option to only stack entities from spawners
-    # Only stack entities that were spawned by an upgradeable spawner?
-    only-spawner: true
-
-- Fixed: Dont merge stacks in non spawner worlds
+- Fixed: Spawners spawning inside blocks in some setups
