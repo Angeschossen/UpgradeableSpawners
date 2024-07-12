@@ -1,1 +1,1 @@
-+ Improved: Reduce amount of block state calls
+- Fixed: Folia support
