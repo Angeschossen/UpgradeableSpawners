@@ -14,6 +14,7 @@ entity:
     max-size: 500
 
     # Merge entities into one stack
+    # It's not possible to use this feature with Folia.
     merge:
       # Merge entities every specified interval.
       # Can be disabled by setting interval to something lower than 1.
@@ -21,6 +22,9 @@ entity:
 
   # Should stacked entities receive knockback when they get hit?
   knockback: true
+
+  # Kill the whole stack, if one entity dies?
+  kill-stack: false
 
   # Should spawned entities be able to move on their own?
   # If set to false, these entities will not move, but will still be pushed by water etc.

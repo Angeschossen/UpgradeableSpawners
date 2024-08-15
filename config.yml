@@ -207,6 +207,7 @@ limit:
   # Disable: 0
   max-per-chunk: 5
   # Set area limits
+  # It's not possible to use this feature with Folia.
   area:
     # Set the radius of chunks to be checked around the spawner.
     # 0 = only the chunk, the spawner is located in (not recommended)

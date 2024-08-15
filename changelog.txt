@@ -1,1 +1,5 @@
-- Fixed: Folia support
+- Fixed: Entity type of vanilla spawner upon placement silktouch
+
++ Added: Option to kill whole stack
+  # Kill the whole stack, if one entity dies?
+  kill-stack: false
