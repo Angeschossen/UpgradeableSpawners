@@ -1,1 +1,1 @@
-- Fixed: Display of spawned entity with no-conditions enabled
+- Fixed: Hide item attributes
